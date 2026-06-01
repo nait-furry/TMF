@@ -48,7 +48,7 @@ export default function Navigation() {
               width={140}
               height={100}
               className={`w-auto object-contain hover:opacity-90 transition-all duration-500 ease-in-out ${
-                isScrolled ? 'h-10 md:h-12' : 'h-16 md:h-20'
+                isScrolled ? 'h-8 md:h-12' : 'h-12 md:h-20'
               }`}
               priority
             />
