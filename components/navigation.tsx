@@ -63,22 +63,24 @@ export default function Navigation() {
               Home
             </button>
             <button
-              onClick={() => scrollToSection('mission')}
+              // onClick={() => scrollToSection('mission')}
               className="text-foreground text-sm font-medium hover:text-accent transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 py-1"
             >
-              Mission
+              <Link href="/about">
+              About Us
+              </Link>
             </button>
-            <button
+            {/* <button
               onClick={() => scrollToSection('impact')}
               className="text-foreground text-sm font-medium hover:text-accent transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 py-1"
             >
               Impact
-            </button>
+            </button> */}
             <button
               onClick={() => scrollToSection('stories')}
               className="text-foreground text-sm font-medium hover:text-accent transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 py-1"
             >
-              Stories
+              What we do
             </button>
             <button
               onClick={() => scrollToSection('cta')}
@@ -92,7 +94,7 @@ export default function Navigation() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => scrollToSection('cta')}
-              className="hidden sm:inline-flex px-6 py-2 bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
+              className="hidden rounded-full sm:inline-flex px-6 py-2 bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
             >
               Donate
             </button>
@@ -126,25 +128,25 @@ export default function Navigation() {
                 onClick={() => scrollToSection('mission')}
                 className="text-left text-foreground text-sm font-medium hover:text-accent transition-colors py-2 border-b border-border/10"
               >
-                Mission
+                About Us
               </button>
               <button
                 onClick={() => scrollToSection('impact')}
                 className="text-left text-foreground text-sm font-medium hover:text-accent transition-colors py-2 border-b border-border/10"
               >
-                Impact
+                 Gallery
               </button>
               <button
                 onClick={() => scrollToSection('stories')}
                 className="text-left text-foreground text-sm font-medium hover:text-accent transition-colors py-2 border-b border-border/10"
               >
-                Stories
+                What we do
               </button>
               <button
                 onClick={() => scrollToSection('cta')}
                 className="text-left text-foreground text-sm font-medium hover:text-accent transition-colors py-2 border-b border-border/10"
               >
-                Join
+               Contact
               </button>
               <button
                 onClick={() => scrollToSection('cta')}
