@@ -20,6 +20,7 @@ const config = {
         'primary-foreground': 'var(--color-primary-foreground)',
         secondary: 'var(--color-secondary)',
         'secondary-foreground': 'var(--color-secondary-foreground)',
+        coloursecondary: 'var(--coloursecondary)',
         muted: 'var(--color-muted)',
         'muted-foreground': 'var(--color-muted-foreground)',
         accent: 'var(--color-accent)',

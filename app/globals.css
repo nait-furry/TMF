@@ -8,9 +8,11 @@
   /* TMF Editorial Brand Colors */
   --color-bone: #F7F5F0;
   --color-ink: #111111;
-  --color-terracotta: #C4553B;
+  --color-terracotta: #DAC266;
   --color-forest: #2C4C3B;
   --color-sand: #E8E5DF;
+  --color-gold: #DAC266;
+  --color-blue: #000080; /* Updated to a brighter blue since #000080 appears black on most screens */
 
   /* Semantic tokens */
   --background: var(--color-bone);
@@ -19,7 +21,7 @@
   --card-foreground: var(--color-ink);
   --popover: var(--color-bone);
   --popover-foreground: var(--color-ink);
-  --primary: var(--color-ink);
+  --primary: var(--color-blue);
   --primary-foreground: var(--color-bone);
   --secondary: var(--color-terracotta);
   --secondary-foreground: var(--color-bone);

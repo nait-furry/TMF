@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* PROGRAMS - ASYMMETRIC GRID */}
-      <section className="py-24 bg-foreground text-background px-6 md:px-12 lg:px-24">
+      <section className="py-24 bg-primary text-primary-foreground px-6 md:px-12 lg:px-24">
         <div className="flex justify-between items-end mb-20 border-b border-background/20 pb-8">
           <h2 className="font-serif text-5xl md:text-7xl tracking-tighter">Initiatives</h2>
           <span className="font-sans text-sm tracking-widest uppercase text-background/50 hidden md:block">04 Programs</span>
@@ -241,10 +241,10 @@ export default function Home() {
             Join the <br/><span className="italic text-secondary">Movement.</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="px-10 py-4 bg-foreground text-background font-sans uppercase tracking-widest text-xs hover:bg-secondary hover:text-background transition-colors duration-300">
+            <button className="px-10 py-4 bg-primary text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-secondary hover:text-background transition-colors duration-300">
               Donate Now
             </button>
-            <button className="px-10 py-4 border border-foreground text-foreground font-sans uppercase tracking-widest text-xs hover:bg-card transition-colors duration-300">
+            <button className="px-10 py-4 border border-primary text-primary font-sans uppercase tracking-widest text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300">
               Get Involved
             </button>
           </div>

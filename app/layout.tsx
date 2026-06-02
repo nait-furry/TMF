@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   keywords: ['Community', 'Transformation', 'Kenya', 'Faith', 'Empowerment', 'Social Impact'],
   authors: [{ name: 'Transform Maisha Foundation' }],
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-icon.png',
+    icon: '/Logo2-removebg-preview.png',
+    apple: '/Logo2-removebg-preview.png',
   },
   openGraph: {
     title: 'Transform Maisha Foundation - Every Life Counts',

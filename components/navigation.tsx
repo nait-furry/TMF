@@ -92,7 +92,7 @@ export default function Navigation() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => scrollToSection('cta')}
-              className="hidden sm:inline-flex px-6 py-2 bg-accent text-accent-foreground font-medium text-sm hover:bg-accent/90 transition-all transform hover:scale-105 active:scale-95"
+              className="hidden sm:inline-flex px-6 py-2 bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-all transform hover:scale-105 active:scale-95"
             >
               Donate
             </button>
@@ -148,7 +148,7 @@ export default function Navigation() {
               </button>
               <button
                 onClick={() => scrollToSection('cta')}
-                className="w-full text-center px-6 py-2.5 bg-accent text-accent-foreground font-medium text-sm hover:bg-accent/90 transition-all mt-2"
+                className="w-full text-center px-6 py-2.5 bg-primary text-primary-foreground rounded-full font-medium text-sm hover:bg-primary/90 transition-all mt-2"
               >
                 Donate
               </button>

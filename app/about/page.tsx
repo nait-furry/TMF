@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import HeroSection from '@/components/hero-section'
 import MasonryGrid from '@/components/masonry-grid'
+import AnimatedCounter from '@/components/animated-counter'
+import { coreValues, teamMembers, testimonials } from '@/lib/data/about'
 
 export default function About() {
   const containerVariants = {
@@ -25,72 +27,6 @@ export default function About() {
       transition: { duration: 0.8, ease: 'easeOut' },
     },
   }
-
-  const coreValues = [
-    {
-      id: '1',
-      title: 'Compassion',
-      description: 'Heart-centered service to our communities',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=400&h=400&fit=crop',
-    },
-    {
-      id: '2',
-      title: 'Christ-Centered',
-      description: 'Faith-driven transformation and purpose',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop',
-    },
-    {
-      id: '3',
-      title: 'Community',
-      description: 'Collective empowerment and growth',
-      image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=400&fit=crop',
-    },
-    {
-      id: '4',
-      title: 'Transformation',
-      description: 'Lasting social and economic change',
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop',
-    },
-  ]
-
-  const teamMembers = [
-    {
-      id: '1',
-      name: 'Leadership',
-      role: 'Visionary Leadership',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
-    },
-    {
-      id: '2',
-      name: 'Programs Team',
-      role: 'Community Impact',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop',
-    },
-    {
-      id: '3',
-      name: 'Operations',
-      role: 'Sustainability',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-    },
-  ]
-
-  const testimonials = [
-    {
-      quote: 'This organization changed my life through mentorship and belief in my potential.',
-      author: 'Sarah K.',
-      role: 'Youth Mentorship Program',
-    },
-    {
-      quote: 'The faith-centered approach gave me purpose beyond survival.',
-      author: 'John M.',
-      role: 'Economic Empowerment',
-    },
-    {
-      quote: 'I&apos;ve seen my community transform through compassionate action.',
-      author: 'Mary N.',
-      role: 'Community Leader',
-    },
-  ]
 
   return (
     <main className="min-h-screen bg-background">
@@ -121,14 +57,14 @@ export default function About() {
 
               <motion.div variants={itemVariants}>
                 <h3 className="font-display text-2xl text-primary mb-3">Mission</h3>
-                <p className="text-lg text-foreground/80 leading-relaxed border-l-4 border-accent pl-6">
+                <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-coloursecondary pl-6">
                   To be compassionate, Christ-centered companions in community empowerment for lasting social and economic transformation.
                 </p>
               </motion.div>
 
               <motion.div variants={itemVariants}>
                 <h3 className="font-display text-2xl text-primary mb-3">Vision</h3>
-                <p className="text-lg text-foreground/80 leading-relaxed border-l-4 border-accent pl-6">
+                <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-coloursecondary pl-6">
                   A community that utilizes its God-given potential through Christ-centered mentorship and support.
                 </p>
               </motion.div>
@@ -151,7 +87,7 @@ export default function About() {
 
       {/* Impact Integration Section */}
       <motion.section
-        className="py-24 px-6 bg-cream"
+        className="py-24 px-6 bg-card border-y border-border"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
@@ -171,7 +107,9 @@ export default function About() {
               className="bg-background p-8 rounded-sm border-t-4 border-accent"
               variants={itemVariants}
             >
-              <h3 className="font-display text-4xl text-primary mb-2">2,500+</h3>
+              <h3 className="font-display text-4xl text-primary mb-2">
+                <AnimatedCounter value={2500} suffix="+" />
+              </h3>
               <p className="text-foreground/70">Lives Directly Transformed</p>
             </motion.div>
 
@@ -179,7 +117,9 @@ export default function About() {
               className="bg-background p-8 rounded-sm border-t-4 border-accent"
               variants={itemVariants}
             >
-              <h3 className="font-display text-4xl text-primary mb-2">15</h3>
+              <h3 className="font-display text-4xl text-primary mb-2">
+                <AnimatedCounter value={15} />
+              </h3>
               <p className="text-foreground/70">Active Community Programs</p>
             </motion.div>
 
@@ -187,7 +127,9 @@ export default function About() {
               className="bg-background p-8 rounded-sm border-t-4 border-accent"
               variants={itemVariants}
             >
-              <h3 className="font-display text-4xl text-primary mb-2">8</h3>
+              <h3 className="font-display text-4xl text-primary mb-2">
+                <AnimatedCounter value={8} />
+              </h3>
               <p className="text-foreground/70">Counties Across Kenya</p>
             </motion.div>
           </div>
@@ -213,10 +155,10 @@ export default function About() {
           </motion.div>
 
           {/* Explore More */}
-          <motion.div className="text-center" variants={itemVariants}>
+          <motion.div className="text-center mt-12" variants={itemVariants}>
             <Link
               href="/stories"
-              className="inline-flex px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-sm hover:bg-primary/90 transition-all"
+              className="inline-flex px-10 py-4 bg-foreground text-background font-sans uppercase tracking-widest text-xs hover:bg-coloursecondary transition-colors duration-300"
             >
               Read More Stories
             </Link>
@@ -248,7 +190,7 @@ export default function About() {
 
       {/* Team Section */}
       <motion.section
-        className="py-24 px-6 bg-cream"
+        className="py-24 px-6 bg-card border-y border-border"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
@@ -303,16 +245,16 @@ export default function About() {
             Be part of a compassionate movement transforming lives and communities across Kenya
           </motion.p>
 
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants}>
+          <motion.div className="flex flex-col sm:flex-row gap-6 justify-center mt-8" variants={itemVariants}>
             <Link
               href="/get-involved"
-              className="px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-sm hover:opacity-90 transition-opacity"
+              className="px-10 py-4 bg-coloursecondary text-background font-sans uppercase tracking-widest text-xs hover:bg-secondary transition-colors duration-300"
             >
               Donate Now
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-3 border-2 border-primary-foreground text-primary-foreground font-semibold rounded-sm hover:bg-primary-foreground/10 transition-colors"
+              className="px-10 py-4 border border-foreground text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-card hover:text-foreground transition-colors duration-300"
             >
               Get In Touch
             </Link>
