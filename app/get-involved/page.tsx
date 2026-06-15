@@ -141,6 +141,7 @@ export default function GetInvolved() {
 
       {/* Donation Tiers */}
       <motion.section
+        id="donate"
         className="py-24 px-6 bg-background"
         initial="hidden"
         whileInView="visible"
@@ -196,13 +197,13 @@ export default function GetInvolved() {
                       ))}
                     </ul>
 
-                    <button className={`w-full py-3 font-semibold rounded-sm transition-all ${
+                    <Link href="/contact" className={`block w-full py-3 text-center font-semibold rounded-sm transition-all ${
                       tier.highlighted
                         ? 'bg-accent text-accent-foreground hover:opacity-90'
                         : 'bg-primary text-primary-foreground hover:bg-primary/90'
                     }`}>
                       {tier.period === 'Monthly' ? 'Set Up Monthly' : 'Donate Now'}
-                    </button>
+                    </Link>
                   </div>
                 </motion.div>
               )
@@ -213,6 +214,7 @@ export default function GetInvolved() {
 
       {/* Ways to Give */}
       <motion.section
+        id="monthly"
         className="py-24 px-6 bg-cream"
         initial="hidden"
         whileInView="visible"
@@ -297,7 +299,7 @@ export default function GetInvolved() {
           >
             We believe transparency builds trust. Every dollar is tracked and reported. 
             <Link href="/contact" className="text-accent hover:underline ml-2">
-              Download our latest financial report.
+              Request our latest financial report.
             </Link>
           </motion.p>
         </div>
@@ -368,12 +370,14 @@ export default function GetInvolved() {
             Your generosity creates pathways to transformation. Every donation is an investment in human potential.
           </motion.p>
 
-          <motion.button
-            className="px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-sm hover:opacity-90 transition-opacity"
-            variants={itemVariants}
-          >
-            Donate Now
-          </motion.button>
+          <motion.div variants={itemVariants}>
+            <Link
+              href="/contact"
+              className="inline-flex px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-sm hover:opacity-90 transition-opacity"
+            >
+              Donate Now
+            </Link>
+          </motion.div>
         </div>
       </motion.section>
     </main>

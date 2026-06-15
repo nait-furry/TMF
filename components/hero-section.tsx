@@ -1,20 +1,20 @@
-import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
+import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 
 interface HeroSectionProps {
-  title: string
-  subtitle?: string
-  backgroundImage?: string
+  title: string;
+  subtitle?: string;
+  backgroundImage?: string;
   primaryCTA?: {
-    label: string
-    href: string
-  }
+    label: string;
+    href: string;
+  };
   secondaryCTA?: {
-    label: string
-    href: string
-  }
-  showScrollIndicator?: boolean
-  imageOverlay?: boolean
+    label: string;
+    href: string;
+  };
+  showScrollIndicator?: boolean;
+  imageOverlay?: boolean;
 }
 
 export default function HeroSection({
@@ -28,30 +28,44 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden pt-16"
+      id="hero"
+      className={`relative min-h-[72vh] w-full flex items-center justify-center overflow-hidden pt-28 pb-20 ${
+        backgroundImage ? "text-primary-foreground" : "bg-cream"
+      }`}
       style={
         backgroundImage
           ? {
               backgroundImage: `url('${backgroundImage}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }
           : undefined
       }
     >
       {/* Overlay */}
-      {backgroundImage && imageOverlay && (
-        <div className="absolute inset-0 bg-primary/20" />
+      {backgroundImage && imageOverlay && <div className="absolute inset-0 " />}
+      {!backgroundImage && (
+        <div className="absolute inset-x-0 top-0 h-px bg-border" />
       )}
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="font-display font-bold text-display-lg text-primary mb-4 leading-tight">
+        <h1
+          className={`font-display font-bold text-5xl md:text-7xl lg:text-8xl mb-5 leading-none ${
+            backgroundImage ? "text-primary-foreground" : "text-primary"
+          }`}
+        >
           {title}
         </h1>
 
         {subtitle && (
-          <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p
+            className={`text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed ${
+              backgroundImage
+                ? "text-primary-foreground/90"
+                : "text-foreground/80"
+            }`}
+          >
             {subtitle}
           </p>
         )}
@@ -86,5 +100,5 @@ export default function HeroSection({
         </div>
       )}
     </section>
-  )
+  );
 }

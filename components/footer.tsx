@@ -69,15 +69,15 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm mb-4">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-accent/20 rounded-sm hover:bg-accent/30 transition-colors">
+              <span className="p-2 bg-accent/20 rounded-sm text-primary-foreground/70">
                 <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="p-2 bg-accent/20 rounded-sm hover:bg-accent/30 transition-colors">
+              </span>
+              <span className="p-2 bg-accent/20 rounded-sm text-primary-foreground/70">
                 <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="p-2 bg-accent/20 rounded-sm hover:bg-accent/30 transition-colors">
+              </span>
+              <span className="p-2 bg-accent/20 rounded-sm text-primary-foreground/70">
                 <Instagram className="w-4 h-4" />
-              </a>
+              </span>
             </div>
           </div>
         </div>
@@ -87,10 +87,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
             <p>&copy; 2024 Transform Maisha Foundation. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="/privacy" className="hover:text-accent transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="/terms" className="hover:text-accent transition-colors">
                 Terms of Service
               </Link>
             </div>

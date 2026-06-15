@@ -67,13 +67,13 @@ export default function Contact() {
       icon: MapPin,
       label: 'Office',
       value: 'Nairobi, Kenya',
-      href: '#',
+      href: '#map',
     },
     {
       icon: Clock,
       label: 'Office Hours',
       value: 'Mon - Fri, 9AM - 5PM EAT',
-      href: '#',
+      href: 'mailto:info@transformmaisha.org',
     },
   ]
 
@@ -102,6 +102,7 @@ export default function Contact() {
               </motion.h2>
 
               <motion.form
+                id="contact-form"
                 onSubmit={handleSubmit}
                 className="space-y-6"
                 variants={containerVariants}
@@ -230,13 +231,12 @@ export default function Contact() {
                 <h3 className="font-semibold text-primary mb-4">Follow Us</h3>
                 <div className="flex gap-4">
                   {['Facebook', 'Twitter', 'Instagram', 'LinkedIn'].map((social) => (
-                    <a
+                    <span
                       key={social}
-                      href="#"
-                      className="px-4 py-2 bg-background border border-border rounded-sm hover:bg-primary hover:text-primary-foreground transition-all text-sm font-medium"
+                      className="px-4 py-2 bg-background border border-border rounded-sm text-sm font-medium text-foreground/60"
                     >
                       {social}
-                    </a>
+                    </span>
                   ))}
                 </div>
               </motion.div>
@@ -247,6 +247,7 @@ export default function Contact() {
 
       {/* Map Section */}
       <motion.section
+        id="map"
         className="relative py-24 px-6 bg-cream h-96 overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

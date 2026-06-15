@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { motion, useScroll } from 'framer-motion'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { ArrowRight, ArrowDownRight } from 'lucide-react'
 import { useRef } from 'react'
 
@@ -11,31 +12,39 @@ export default function Home() {
   return (
     <main ref={containerRef} className="bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground">
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex flex-col justify-between pt-32 pb-12 px-6 md:px-12 lg:px-24">
-        {/* Top meta */}
-        <div className="flex justify-between items-start font-sans text-xs uppercase tracking-widest text-foreground/60">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+      <section id="hero" className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-32 pb-12 px-6 md:px-12 lg:px-24 text-primary-foreground">
+        <Image
+          src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
+          alt="Community members gathered together"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-primary/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-primary/20" />
+
+        <div className="relative z-10 flex justify-between items-start font-sans text-xs uppercase tracking-widest text-primary-foreground/75">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
             Transform Maisha<br/>Foundation
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="text-right">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-right">
             Nairobi, Kenya<br/>Est. 2024
           </motion.div>
         </div>
 
-        {/* Massive Typography */}
-        <div className="mt-20 mb-12">
+        <div className="relative z-10 mt-16 mb-12 max-w-6xl">
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-[15vw] leading-[0.8] tracking-tighter uppercase"
+            className="font-serif text-6xl md:text-8xl lg:text-9xl leading-none uppercase"
           >
-            Every <span className="text-secondary italic pr-8">Life</span><br/>
+            Every <span className="text-secondary italic pr-4">Life</span><br/>
             Counts.
           </motion.h1>
         </div>
 
-        <div className="grid md:grid-cols-12 gap-8 items-end">
+        <div className="relative z-10 grid md:grid-cols-12 gap-8 items-end">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -48,9 +57,25 @@ export default function Home() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="md:col-span-8 md:col-start-6 max-w-xl font-sans text-lg md:text-xl leading-relaxed text-foreground/80"
+            className="md:col-span-8 md:col-start-6 max-w-2xl font-sans text-lg md:text-xl leading-relaxed text-primary-foreground/90"
           >
-            We are Christ-centered companions, empowering communities across Kenya through economic dignity, spiritual growth, and generational transformation.
+            <p>
+              We are Christ-centered companions empowering communities across Kenya through economic dignity, spiritual growth, and generational transformation.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/get-involved#donate"
+                className="inline-flex items-center justify-center px-8 py-3 bg-secondary text-background font-sans uppercase tracking-widest text-xs hover:bg-background hover:text-primary transition-colors duration-300"
+              >
+                Donate Now
+              </Link>
+              <Link
+                href="/programs"
+                className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-primary-foreground hover:text-primary transition-colors duration-300"
+              >
+                What We Do
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -133,23 +158,25 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className={`group cursor-pointer ${item.offset}`}
+              className={`group ${item.offset}`}
             >
-              <div className="relative aspect-[3/4] mb-6 overflow-hidden bg-background/10">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                />
-              </div>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-serif text-3xl md:text-4xl mb-3 group-hover:text-secondary transition-colors text-background">{item.title}</h3>
-                  <p className="font-sans text-background/60 max-w-sm text-sm leading-relaxed">{item.desc}</p>
+              <Link href="/programs" className="block">
+                <div className="relative aspect-[3/4] mb-6 overflow-hidden bg-background/10">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                  />
                 </div>
-                <ArrowRight className="w-6 h-6 transform -rotate-45 group-hover:rotate-0 transition-transform text-secondary" />
-              </div>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-serif text-3xl md:text-4xl mb-3 group-hover:text-secondary transition-colors text-background">{item.title}</h3>
+                    <p className="font-sans text-background/60 max-w-sm text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                  <ArrowRight className="w-6 h-6 transform -rotate-45 group-hover:rotate-0 transition-transform text-secondary" />
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -241,12 +268,12 @@ export default function Home() {
             Join the <br/><span className="italic text-secondary">Movement.</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="px-10 py-4 bg-primary text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-secondary hover:text-background transition-colors duration-300">
+            <Link href="/get-involved#donate" className="px-10 py-4 bg-primary text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-secondary hover:text-background transition-colors duration-300">
               Donate Now
-            </button>
-            <button className="px-10 py-4 border border-primary text-primary font-sans uppercase tracking-widest text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300">
+            </Link>
+            <Link href="/get-involved" className="px-10 py-4 border border-primary text-primary font-sans uppercase tracking-widest text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300">
               Get Involved
-            </button>
+            </Link>
           </div>
         </motion.div>
       </section>
