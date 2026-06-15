@@ -7,15 +7,16 @@ import { X } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
 
 const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=600&fit=crop', category: 'Events', alt: 'Neema Festival' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=600&fit=crop', category: 'Community', alt: 'Community gathering' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=600&fit=crop', category: 'Youth', alt: 'Youth mentorship' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1516594798280-26c841de141e?w=600&h=600&fit=crop', category: 'Women', alt: 'Women empowerment' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop', category: 'Training', alt: 'Skills training' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop', category: 'Leadership', alt: 'Leadership training' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=600&h=600&fit=crop', category: 'Compassion', alt: 'Compassion ministry' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop', category: 'Impact', alt: 'Community impact' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop', category: 'Events', alt: 'Program event' },
+  { id: 1, src: '/320686.jpg', category: 'Events', alt: 'Outdoor Neema Festival audience' },
+  { id: 2, src: '/320691.jpg', category: 'Worship', alt: 'Speaker leading worship on stage' },
+  { id: 3, src: '/320695.jpg', category: 'Community', alt: 'Outdoor audience seated near the stage' },
+  { id: 4, src: '/320698.jpg', category: 'Training', alt: 'Indoor community teaching session' },
+  { id: 5, src: '/320703.jpg', category: 'Youth', alt: 'Youth leaders on an outdoor stage' },
+  { id: 6, src: '/320704.jpg', category: 'Events', alt: 'Large crowd gathered at night' },
+  { id: 7, src: '/320709.jpg', category: 'Leadership', alt: 'Leader speaking during a stage session' },
+  { id: 8, src: '/320710.jpg', category: 'Impact', alt: 'Community gathered around an illuminated stage' },
+  { id: 9, src: '/320713.jpg', category: 'Community', alt: 'Night audience responding during an event' },
+  { id: 10, src: '/320716.jpg', category: 'Training', alt: 'Facilitator addressing an indoor audience' },
 ]
 
 const categories = ['All', ...Array.from(new Set(galleryImages.map((img) => img.category)))]

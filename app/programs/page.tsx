@@ -32,7 +32,7 @@ export default function Programs() {
       description:
         'An annual celebration of community, faith, and transformation bringing thousands together for spiritual renewal and social connection.',
       impact: '500+ participants annually',
-      image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop',
+      image: '/320686.jpg',
       color: 'from-accent/20',
     },
     {
@@ -41,7 +41,7 @@ export default function Programs() {
       description:
         'Comprehensive youth mentorship and skills training designed to equip young leaders with tools for economic independence and spiritual growth.',
       impact: '200+ youth engaged yearly',
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop',
+      image: '/320703.jpg',
       color: 'from-primary/10',
     },
     {
@@ -50,7 +50,7 @@ export default function Programs() {
       description:
         'Faith-centered community support addressing immediate needs while fostering long-term empowerment and dignity for vulnerable populations.',
       impact: '1,000+ households supported',
-      image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop',
+      image: '/320713.jpg',
       color: 'from-accent/20',
     },
     {
@@ -59,7 +59,7 @@ export default function Programs() {
       description:
         'Economic and leadership development for women, creating pathways to financial independence, business ownership, and community leadership.',
       impact: '300+ women transformed',
-      image: 'https://images.unsplash.com/photo-1516594798280-26c841de141e?w=600&h=400&fit=crop',
+      image: '/320698.jpg',
       color: 'from-primary/10',
     },
   ]

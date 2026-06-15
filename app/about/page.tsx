@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import HeroSection from '@/components/hero-section'
-import MasonryGrid from '@/components/masonry-grid'
-import AnimatedCounter from '@/components/animated-counter'
-import { coreValues, teamMembers, testimonials } from '@/lib/data/about'
+import Link from "next/link";
+import { motion } from "framer-motion";
+import HeroSection from "@/components/hero-section";
+import MasonryGrid from "@/components/masonry-grid";
+import AnimatedCounter from "@/components/animated-counter";
+import { coreValues, teamMembers, testimonials } from "@/lib/data/about";
 
 export default function About() {
   const containerVariants = {
@@ -17,16 +17,16 @@ export default function About() {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
+      transition: { duration: 0.8, ease: "easeOut" },
     },
-  }
+  };
 
   return (
     <main className="min-h-screen bg-background">
@@ -41,7 +41,7 @@ export default function About() {
         className="py-24 px-6 bg-background"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="max-w-7xl mx-auto">
@@ -49,23 +49,34 @@ export default function About() {
             {/* Left: Content */}
             <motion.div className="space-y-6" variants={containerVariants}>
               <motion.div variants={itemVariants}>
-                <h2 className="font-display text-display-md text-primary mb-4">Our Journey</h2>
+                <h2 className="font-display text-display-md text-primary mb-4">
+                  Our Journey
+                </h2>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  Transform Maisha Foundation was born from a conviction that every life has inherent worth and divine potential. What began as grassroots community mentorship has grown into a comprehensive movement of transformation across Kenya.
+                  Transform Maisha Foundation was born from a conviction that
+                  every life has inherent worth and divine potential. What began
+                  as grassroots community mentorship has grown into a
+                  comprehensive movement of transformation across Kenya.
                 </p>
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <h3 className="font-display text-2xl text-primary mb-3">Mission</h3>
+                <h3 className="font-display text-2xl text-primary mb-3">
+                  Mission
+                </h3>
                 <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-coloursecondary pl-6">
-                  To be compassionate, Christ-centered companions in community empowerment for lasting social and economic transformation.
+                  To be compassionate, Christ-centered companions in community
+                  empowerment for lasting social and economic transformation.
                 </p>
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <h3 className="font-display text-2xl text-primary mb-3">Vision</h3>
+                <h3 className="font-display text-2xl text-primary mb-3">
+                  Vision
+                </h3>
                 <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-coloursecondary pl-6">
-                  A community that utilizes its God-given potential through Christ-centered mentorship and support.
+                  A community that utilizes its God-given potential through
+                  Christ-centered mentorship and support.
                 </p>
               </motion.div>
             </motion.div>
@@ -76,8 +87,8 @@ export default function About() {
               variants={itemVariants}
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop"
-                alt="Transform Maisha team at work"
+                src="/320703.jpg"
+                alt="Transform Maisha leaders facilitating an indoor community session"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -90,7 +101,7 @@ export default function About() {
         className="py-24 px-6 bg-card border-y border-border"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="max-w-7xl mx-auto">
@@ -136,7 +147,9 @@ export default function About() {
 
           {/* Testimonials */}
           <motion.div className="mb-16" variants={containerVariants}>
-            <h3 className="font-display text-2xl text-primary mb-8">Voices of Change</h3>
+            <h3 className="font-display text-2xl text-primary mb-8">
+              Voices of Change
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, idx) => (
                 <motion.div
@@ -147,8 +160,12 @@ export default function About() {
                   <p className="text-foreground/80 italic mb-4">
                     &quot;{testimonial.quote}&quot;
                   </p>
-                  <p className="font-semibold text-primary">{testimonial.author}</p>
-                  <p className="text-sm text-foreground/60">{testimonial.role}</p>
+                  <p className="font-semibold text-primary">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-foreground/60">
+                    {testimonial.role}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -171,7 +188,7 @@ export default function About() {
         className="py-24 px-6 bg-background"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="max-w-7xl mx-auto">
@@ -193,7 +210,7 @@ export default function About() {
         className="py-24 px-6 bg-card border-y border-border"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="max-w-7xl mx-auto">
@@ -204,7 +221,10 @@ export default function About() {
             Our Team
           </motion.h2>
 
-          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-12" variants={containerVariants}>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-12"
+            variants={containerVariants}
+          >
             {teamMembers.map((member) => (
               <motion.div
                 key={member.id}
@@ -218,8 +238,13 @@ export default function About() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-display text-xl text-primary mb-1">{member.name}</h3>
+                <h3 className="font-display text-xl text-primary mb-1">
+                  {member.name}
+                </h3>
                 <p className="text-foreground/70">{member.role}</p>
+                <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-foreground/60">
+                  {member.bio}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -231,21 +256,31 @@ export default function About() {
         className="relative py-24 px-6 bg-primary text-primary-foreground overflow-hidden"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full -mr-48 -mt-48 blur-3xl" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.h2 className="font-display text-display-md mb-6" variants={itemVariants}>
+          <motion.h2
+            className="font-display text-display-md mb-6"
+            variants={itemVariants}
+          >
             Join Our Mission
           </motion.h2>
 
-          <motion.p className="text-xl mb-8 leading-relaxed text-primary-foreground/90" variants={itemVariants}>
-            Be part of a compassionate movement transforming lives and communities across Kenya
+          <motion.p
+            className="text-xl mb-8 leading-relaxed text-primary-foreground/90"
+            variants={itemVariants}
+          >
+            Be part of a compassionate movement transforming lives and
+            communities across Kenya
           </motion.p>
 
-          <motion.div className="flex flex-col sm:flex-row gap-6 justify-center mt-8" variants={itemVariants}>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-6 justify-center mt-8"
+            variants={itemVariants}
+          >
             <Link
               href="/get-involved"
               className="px-10 py-4 bg-coloursecondary text-background font-sans uppercase tracking-widest text-xs hover:bg-secondary transition-colors duration-300"
@@ -262,5 +297,5 @@ export default function About() {
         </div>
       </motion.section>
     </main>
-  )
+  );
 }

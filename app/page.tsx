@@ -14,8 +14,8 @@ export default function Home() {
       {/* HERO SECTION */}
       <section id="hero" className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-32 pb-12 px-6 md:px-12 lg:px-24 text-primary-foreground">
         <Image
-          src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
-          alt="Community members gathered together"
+          src="/320686.jpg"
+          alt="Transform Maisha community gathered at an outdoor evening event"
           fill
           className="object-cover"
           priority
@@ -90,8 +90,8 @@ export default function Home() {
           className="w-full h-full relative overflow-hidden bg-card"
         >
           <Image
-            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
-            alt="Community gathering"
+            src="/320710.jpg"
+            alt="Large Transform Maisha outdoor gathering facing the stage"
             fill
             className="object-cover animate-slow-pan mix-blend-multiply opacity-90 grayscale"
           />
@@ -130,25 +130,25 @@ export default function Home() {
             {
               title: "Compassion Ministry",
               desc: "Holistic support for individuals and families experiencing poverty.",
-              img: "https://images.unsplash.com/photo-1593113589914-07553801f400?q=80&w=1000&auto=format&fit=crop",
+              img: "/320713.jpg",
               offset: "md:mt-0"
             },
             {
               title: "Youth Leadership",
               desc: "Mentorship and skills training equipping the next generation.",
-              img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop",
+              img: "/320703.jpg",
               offset: "md:mt-32"
             },
             {
               title: "Economic Empowerment",
               desc: "Business training enabling sustainable livelihoods.",
-              img: "https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1000&auto=format&fit=crop",
+              img: "/320698.jpg",
               offset: "md:mt-0"
             },
             {
               title: "Community Development",
               desc: "Grassroots initiatives strengthening social cohesion.",
-              img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop",
+              img: "/320704.jpg",
               offset: "md:mt-32"
             }
           ].map((item, i) => (
@@ -219,17 +219,17 @@ export default function Home() {
             {
               name: "Samuel K.",
               story: "From street life to thriving businessman, Samuel now mentors 15 youth.",
-              img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+              img: "/320691.jpg"
             },
             {
               name: "Grace M.",
               story: "Building financial independence through our economic programs.",
-              img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop"
+              img: "/320709.jpg"
             },
             {
               name: "David O.",
               story: "Youth leader training 20+ young people on faith and business.",
-              img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop"
+              img: "/320695.jpg"
             }
           ].map((story, i) => (
             <motion.div 

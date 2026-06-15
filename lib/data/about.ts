@@ -3,46 +3,42 @@ export const coreValues = [
     id: '1',
     title: 'Compassion',
     description: 'Heart-centered service to our communities',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=400&h=400&fit=crop',
+    image: '/320713.jpg',
   },
   {
     id: '2',
     title: 'Christ-Centered',
     description: 'Faith-driven transformation and purpose',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop',
+    image: '/320691.jpg',
   },
   {
     id: '3',
     title: 'Community',
     description: 'Collective empowerment and growth',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=400&fit=crop',
+    image: '/320686.jpg',
   },
   {
     id: '4',
     title: 'Transformation',
     description: 'Lasting social and economic change',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop',
+    image: '/320704.jpg',
   },
 ];
 
 export const teamMembers = [
   {
     id: '1',
-    name: 'Leadership',
-    role: 'Visionary Leadership',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+    name: 'Allan Muriithi Njeru',
+    role: 'Bishop, Theologian and Pastoral Psychologist',
+    bio: 'Popularly known as Pastor Rhymes, Allan is a bishop and theologian with a doctorate in pastoral psychology.',
+    image: '/320709.jpg',
   },
   {
     id: '2',
-    name: 'Programs Team',
-    role: 'Community Impact',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop',
-  },
-  {
-    id: '3',
-    name: 'Operations',
-    role: 'Sustainability',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
+    name: 'Jennifer Mbaire Ndungu',
+    role: 'Administrator, Counsellor and Director',
+    bio: 'Jennifer is a trained administrator, counsellor and director with vast experience in mission work with YWAM.',
+    image: '/320716.jpg',
   },
 ];
 

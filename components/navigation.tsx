@@ -1,63 +1,67 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about' },
-    { label: 'What we do', href: '/programs' },
-    { label: 'Stories', href: '/stories' },
-    { label: 'Gallery', href: '/gallery' },
-    { label: 'Join', href: '/get-involved' },
-    { label: 'Contact', href: '/contact' },
-  ]
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "What we do", href: "/programs" },
+    { label: "Stories", href: "/stories" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Join", href: "/get-involved" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/'
-    return pathname.startsWith(href)
-  }
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 pointer-events-none transition-all duration-300">
-      <div 
+      <div
         className={`w-full mx-auto pointer-events-auto transition-all duration-500 ease-in-out px-6 md:px-8 ${
-          isScrolled 
-            ? 'max-w-5xl mt-4 bg-background/45 backdrop-blur-xl border border-border/40 rounded-full shadow-lg shadow-black/5 py-3' 
-            : 'max-w-7xl mt-0 bg-transparent border-transparent py-5 border-b'
+          isScrolled
+            ? "max-w-5xl mt-4 bg-background/45 backdrop-blur-xl border border-border/40 rounded-full shadow-lg shadow-black/5 py-3"
+            : "max-w-7xl mt-0 bg-transparent border-transparent py-5 border-b"
         } ${
-          isOpen 
-            ? 'bg-background/95 backdrop-blur-lg border border-border/50  shadow-xl py-6' 
-            : ''
+          isOpen
+            ? "bg-background/95 backdrop-blur-lg border border-border/50  shadow-xl py-6"
+            : ""
         }`}
       >
         <div className="flex items-center justify-between">
-          {/* Logo - Using the new hand-drawn TMF logo */}
-          <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex items-center gap-3 group"
+            onClick={() => setIsOpen(false)}
+          >
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stuff-removebg-preview-x1FpEXlWn8D0sjNrtpqz4Ih9fhqy6C.png"
+              src="/logo.png"
               alt="Transform Maisha Foundation"
-              width={140}
-              height={100}
+              width={180}
+              height={180}
               className={`w-auto object-contain hover:opacity-90 transition-all duration-500 ease-in-out ${
-                isScrolled ? 'h-8 md:h-12' : 'h-12 md:h-20'
+                isScrolled ? "h-8 md:h-12" : "h-12 md:h-20"
               }`}
               priority
             />
@@ -71,8 +75,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 py-1 ${
                   isActive(item.href)
-                    ? 'text-accent after:scale-x-100'
-                    : 'text-foreground hover:text-accent after:scale-x-0'
+                    ? "text-accent after:scale-x-100"
+                    : "text-foreground hover:text-accent after:scale-x-0"
                 }`}
               >
                 {item.label}
@@ -114,7 +118,7 @@ export default function Navigation() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={`text-left text-sm font-medium hover:text-accent transition-colors py-2 border-b border-border/10 ${
-                    isActive(item.href) ? 'text-accent' : 'text-foreground'
+                    isActive(item.href) ? "text-accent" : "text-foreground"
                   }`}
                 >
                   {item.label}
@@ -132,5 +136,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }

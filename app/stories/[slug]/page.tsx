@@ -9,7 +9,7 @@ const storyData: Record<string, any> = {
   'samuel-journey': {
     title: "Samuel's Journey: From Street Life to Purpose",
     category: 'Youth Transformation',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+    image: '/320691.jpg',
     date: 'March 2024',
     author: 'Samuel M.',
     content: `
@@ -27,7 +27,7 @@ const storyData: Record<string, any> = {
   'faith-foundation': {
     title: "Faith's Foundation: Building an Economic Legacy",
     category: 'Women Empowerment',
-    image: 'https://images.unsplash.com/photo-1516594798280-26c841de141e?w=800&h=600&fit=crop',
+    image: '/320703.jpg',
     date: 'February 2024',
     author: 'Faith K.',
     content: `
@@ -45,7 +45,7 @@ const storyData: Record<string, any> = {
   'community-heals': {
     title: 'Community Heals: Collective Transformation',
     category: 'Community Impact',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop',
+    image: '/320710.jpg',
     date: 'January 2024',
     author: 'Community Leaders',
     content: `
@@ -63,7 +63,7 @@ const storyData: Record<string, any> = {
   'grace-story': {
     title: 'Grace: From Poverty to Prosperity',
     category: 'Mentorship',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop',
+    image: '/320709.jpg',
     date: 'December 2023',
     author: 'Grace N.',
     content: `
@@ -81,7 +81,7 @@ const storyData: Record<string, any> = {
   'mentor-impact': {
     title: 'The Mentor Effect: Multiplying Transformation',
     category: 'Leadership',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+    image: '/320716.jpg',
     date: 'November 2023',
     author: 'Multiple Mentors & Mentees',
     content: `
