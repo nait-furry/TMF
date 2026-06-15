@@ -1,14 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import HeroSection from "@/components/hero-section";
-import MasonryGrid from "@/components/masonry-grid";
 import AnimatedCounter from "@/components/animated-counter";
 import { coreValues, teamMembers, testimonials } from "@/lib/data/about";
 
 export default function About() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,12 +20,12 @@ export default function About() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
     },
   };
 
@@ -64,7 +65,7 @@ export default function About() {
                 <h3 className="font-display text-2xl text-primary mb-3">
                   Mission
                 </h3>
-                <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-coloursecondary pl-6">
+                <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-secondary pl-6">
                   To be compassionate, Christ-centered companions in community
                   empowerment for lasting social and economic transformation.
                 </p>
@@ -74,7 +75,7 @@ export default function About() {
                 <h3 className="font-display text-2xl text-primary mb-3">
                   Vision
                 </h3>
-                <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-coloursecondary pl-6">
+                <p className="text-lg text-foreground/80 leading-relaxed border-l-2 border-secondary pl-6">
                   A community that utilizes its God-given potential through
                   Christ-centered mentorship and support.
                 </p>
@@ -86,10 +87,12 @@ export default function About() {
               className="relative h-96 rounded-sm overflow-hidden"
               variants={itemVariants}
             >
-              <img
+              <Image
                 src="/320703.jpg"
-                alt="Transform Maisha leaders facilitating an indoor community session"
-                className="w-full h-full object-cover"
+                alt="Transform Maisha leaders ministering from an outdoor stage"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
               />
             </motion.div>
           </div>
@@ -175,7 +178,7 @@ export default function About() {
           <motion.div className="text-center mt-12" variants={itemVariants}>
             <Link
               href="/stories"
-              className="inline-flex px-10 py-4 bg-foreground text-background font-sans uppercase tracking-widest text-xs hover:bg-coloursecondary transition-colors duration-300"
+              className="inline-flex px-10 py-4 bg-foreground text-background font-sans uppercase tracking-widest text-xs hover:bg-secondary transition-colors duration-300"
             >
               Read More Stories
             </Link>
@@ -199,8 +202,35 @@ export default function About() {
             Core Values
           </motion.h2>
 
-          <motion.div variants={containerVariants}>
-            <MasonryGrid items={coreValues} columns="grid-cols-4" gap="gap-6" />
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+          >
+            {coreValues.map((value) => (
+              <motion.div
+                key={value.id}
+                className="group overflow-hidden"
+                variants={itemVariants}
+              >
+                <div className="relative h-64 overflow-hidden rounded-sm">
+                  <Image
+                    src={value.image}
+                    alt={value.title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-primary/45 p-4 text-center text-primary-foreground">
+                    <h3 className="font-display text-2xl font-bold mb-2">
+                      {value.title}
+                    </h3>
+                    <p className="text-sm text-primary-foreground/90">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </motion.section>
@@ -232,10 +262,12 @@ export default function About() {
                 variants={itemVariants}
               >
                 <div className="relative w-full h-64 rounded-sm overflow-hidden mb-6">
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
                 <h3 className="font-display text-xl text-primary mb-1">
@@ -282,14 +314,14 @@ export default function About() {
             variants={itemVariants}
           >
             <Link
-              href="/get-involved"
-              className="px-10 py-4 bg-coloursecondary text-background font-sans uppercase tracking-widest text-xs hover:bg-secondary transition-colors duration-300"
+              href="/get-involved#donate"
+              className="px-10 py-4 bg-secondary text-background font-sans uppercase tracking-widest text-xs hover:bg-background hover:text-primary transition-colors duration-300"
             >
               Donate Now
             </Link>
             <Link
               href="/contact"
-              className="px-10 py-4 border border-foreground text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-card hover:text-foreground transition-colors duration-300"
+              className="px-10 py-4 border border-primary-foreground text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-card hover:text-foreground transition-colors duration-300"
             >
               Get In Touch
             </Link>
