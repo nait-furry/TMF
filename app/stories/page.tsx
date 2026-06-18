@@ -28,40 +28,40 @@ export default function Stories() {
 
   const stories = [
     {
-      id: 'samuel-journey',
-      title: "Samuel's Journey",
-      subtitle: 'From Street Life to Purpose',
+      id: 'salvation-and-healing',
+      title: 'Saved and Restored',
+      subtitle: 'Healing, salvation, and family restoration',
       image: '/320691.jpg',
-      category: 'Youth Transformation',
+      category: 'Testimony',
     },
     {
-      id: 'faith-foundation',
-      title: "Faith's Foundation",
-      subtitle: 'Building an Economic Legacy',
-      image: '/320703.jpg',
-      category: 'Women Empowerment',
+      id: 'burden-for-christ',
+      title: 'Burden for Christ Revived',
+      subtitle: 'A renewed call to follow and serve',
+      image: '/320704.jpg',
+      category: 'Worship Encounter',
       span: 'col-span-2',
     },
     {
-      id: 'community-heals',
-      title: 'Community Heals',
-      subtitle: 'Collective Transformation',
+      id: 'campaigns-of-hope',
+      title: 'Campaigns of Hope',
+      subtitle: 'Communities gathered around the gospel',
       image: '/320710.jpg',
-      category: 'Community Impact',
+      category: 'Open-Air Campaign',
     },
     {
-      id: 'grace-story',
-      title: "Grace's New Beginning",
-      subtitle: 'From Poverty to Prosperity',
-      image: '/320709.jpg',
-      category: 'Mentorship',
-    },
-    {
-      id: 'mentor-impact',
-      title: 'The Mentor Effect',
-      subtitle: 'Multiplying Transformation',
+      id: 'discipleship-in-action',
+      title: 'Discipleship in Action',
+      subtitle: 'Teaching, mentorship, and community support',
       image: '/320716.jpg',
-      category: 'Leadership',
+      category: 'Training',
+    },
+    {
+      id: 'mission-that-guides-us',
+      title: 'The Mission That Guides Us',
+      subtitle: 'Campaigns, compassion, and community empowerment',
+      image: '/mission-vision.jpeg',
+      category: 'Mission',
       span: 'col-span-2',
     },
   ]
@@ -88,7 +88,7 @@ export default function Stories() {
               Voices of Change
             </h2>
             <p className="text-lg text-foreground/70">
-              Explore the journeys of individuals and communities discovering their God-given potential
+              Explore testimonies and ministry moments from communities discovering their God-given potential.
             </p>
           </motion.div>
 
@@ -147,18 +147,18 @@ export default function Stories() {
             {[
               {
                 quote:
-                  'Transform Maisha didn\'t just give me skills—they gave me dignity, purpose, and a relationship with Christ that changed everything.',
-                author: 'Samuel M.',
+                  'I was healed, I got saved, and my family was restored.',
+                author: 'Anonymous',
               },
               {
                 quote:
-                  'The mentorship I received planted seeds of hope. Now I\'m mentoring others in my community. The transformation multiplies.',
-                author: 'Grace K.',
+                  'I came so weak and sick but was healed completely and instantly in the service.',
+                author: 'Shereen',
               },
               {
                 quote:
-                  'This organization sees potential in people society has written off. They proved I wasn\'t a lost cause.',
-                author: 'Faith N.',
+                  'My burden for Christ was revived.',
+                author: 'Caleb',
               },
             ].map((testimonial, idx) => (
               <motion.blockquote

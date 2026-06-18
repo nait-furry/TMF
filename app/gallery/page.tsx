@@ -7,16 +7,17 @@ import { X } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
 
 const galleryImages = [
-  { id: 1, src: '/320686.jpg', category: 'Events', alt: 'Outdoor Neema Festival audience' },
-  { id: 2, src: '/320691.jpg', category: 'Worship', alt: 'Speaker leading worship on stage' },
-  { id: 3, src: '/320695.jpg', category: 'Community', alt: 'Outdoor audience seated near the stage' },
-  { id: 4, src: '/320698.jpg', category: 'Training', alt: 'Indoor community teaching session' },
-  { id: 5, src: '/320703.jpg', category: 'Youth', alt: 'Youth leaders on an outdoor stage' },
-  { id: 6, src: '/320704.jpg', category: 'Events', alt: 'Large crowd gathered at night' },
-  { id: 7, src: '/320709.jpg', category: 'Leadership', alt: 'Leader speaking during a stage session' },
-  { id: 8, src: '/320710.jpg', category: 'Impact', alt: 'Community gathered around an illuminated stage' },
-  { id: 9, src: '/320713.jpg', category: 'Community', alt: 'Night audience responding during an event' },
+  { id: 1, src: '/320686.jpg', category: 'Campaigns', alt: 'Outdoor audience gathered in rows for an evening campaign' },
+  { id: 2, src: '/320691.jpg', category: 'Worship', alt: 'Minister leading worship and prayer from the stage' },
+  { id: 3, src: '/320695.jpg', category: 'Campaigns', alt: 'Large outdoor audience facing the illuminated stage' },
+  { id: 4, src: '/320698.jpg', category: 'Training', alt: 'Indoor teaching session with a gathered community' },
+  { id: 5, src: '/320703.jpg', category: 'Worship', alt: 'Worship leaders ministering from an outdoor stage' },
+  { id: 6, src: '/320704.jpg', category: 'Campaigns', alt: 'Crowd gathered near the stage during a night campaign' },
+  { id: 7, src: '/320709.jpg', category: 'Worship', alt: 'Minister speaking during a stage session' },
+  { id: 8, src: '/320710.jpg', category: 'Campaigns', alt: 'Community gathered around a brightly lit outdoor stage' },
+  { id: 9, src: '/320713.jpg', category: 'Campaigns', alt: 'Night crowd responding during open-air ministry' },
   { id: 10, src: '/320716.jpg', category: 'Training', alt: 'Facilitator addressing an indoor audience' },
+  { id: 11, src: '/mission-vision.jpeg', category: 'Mission', alt: 'Transform Maisha Foundation mission, vision, and strategy artwork' },
 ]
 
 const categories = ['All', ...Array.from(new Set(galleryImages.map((img) => img.category)))]
@@ -55,7 +56,7 @@ export default function Gallery() {
       {/* Hero */}
       <HeroSection
         title="Visual Stories"
-        subtitle="Moments that capture the spirit of transformation across Kenya"
+        subtitle="Moments from worship, indoor training, open-air campaigns, and the mission that guides the work"
       />
 
       {/* Category Filter */}
@@ -192,7 +193,7 @@ export default function Gallery() {
           </motion.h2>
 
           <motion.p className="text-xl mb-8 leading-relaxed text-primary-foreground/90" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-            Follow our journey and see the faces of transformation across Kenya
+            Follow the journey from the event ground to the testimony report as lives are reached across Kenya.
           </motion.p>
 
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>

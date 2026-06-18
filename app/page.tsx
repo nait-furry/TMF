@@ -60,7 +60,7 @@ export default function Home() {
             className="md:col-span-8 md:col-start-6 max-w-2xl font-sans text-lg md:text-xl leading-relaxed text-primary-foreground/90"
           >
             <p>
-              We are Christ-centered companions empowering communities across Kenya through economic dignity, spiritual growth, and generational transformation.
+              We are Christ-centered companions empowering communities across Kenya through worship gatherings, youth mentorship, compassion ministry, and lasting social and economic transformation.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -128,26 +128,26 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-24">
           {[
             {
-              title: "Compassion Ministry",
-              desc: "Holistic support for individuals and families experiencing poverty.",
+              title: "Worship & Revival",
+              desc: "Holy Spirit nights, worship encounters, and gospel gatherings that call communities to Christ.",
               img: "/320713.jpg",
               offset: "md:mt-0"
             },
             {
-              title: "Youth Leadership",
-              desc: "Mentorship and skills training equipping the next generation.",
+              title: "Youth Connection",
+              desc: "Mentorship, discipleship, and leadership spaces where young people are empowered for impact.",
               img: "/320703.jpg",
               offset: "md:mt-32"
             },
             {
-              title: "Economic Empowerment",
-              desc: "Business training enabling sustainable livelihoods.",
+              title: "Community Outreach",
+              desc: "Open-air missions and local partnerships carrying hope, prayer, and practical care.",
               img: "/320698.jpg",
               offset: "md:mt-0"
             },
             {
-              title: "Community Development",
-              desc: "Grassroots initiatives strengthening social cohesion.",
+              title: "Media Ministry",
+              desc: "Radio, testimonies, and digital stories extending the message beyond the event ground.",
               img: "/320704.jpg",
               offset: "md:mt-32"
             }
@@ -207,6 +207,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FEATURED MOMENTS */}
+      <section className="py-28 px-6 md:px-12 lg:px-24 bg-background">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-4 lg:sticky lg:top-28">
+            <p className="font-sans text-xs uppercase tracking-widest text-foreground/50 mb-5">
+              Featured Ministry Moments
+            </p>
+            <h2 className="font-serif text-5xl md:text-6xl leading-none text-foreground mb-6">
+              Faith in motion, from worship nights to community missions.
+            </h2>
+            <p className="font-sans text-foreground/70 leading-relaxed">
+              The movement continues through Holy Spirit Night, Spark Conference,
+              radio ministry, Neema Festival, youth gatherings, and open-air
+              evangelism across Kenya.
+            </p>
+          </div>
+
+          <div className="lg:col-span-8 grid sm:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Mission & Vision",
+                text: "Compassionate, Christ-centered companionship through campaigns, compassion, and community empowerment.",
+                img: "/mission-vision.jpeg",
+                aspect: "aspect-[3/4]"
+              },
+              {
+                title: "Outdoor Campaigns",
+                text: "Communities gather for gospel proclamation, worship, prayer, and public testimony.",
+                img: "/320686.jpg",
+                aspect: "aspect-[4/3]"
+              },
+              {
+                title: "Worship Encounters",
+                text: "Stage ministry and worship leaders help create space for surrender and renewed faith.",
+                img: "/320703.jpg",
+                aspect: "aspect-[3/4]"
+              },
+              {
+                title: "Community Response",
+                text: "Crowds respond together as light, prayer, and worship fill the event ground.",
+                img: "/320695.jpg",
+                aspect: "aspect-[4/3]"
+              }
+            ].map((moment) => (
+              <motion.article
+                key={moment.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7 }}
+                className="group"
+              >
+                <div className={`relative ${moment.aspect} overflow-hidden bg-card mb-5`}>
+                  <Image
+                    src={moment.img}
+                    alt={moment.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="font-serif text-3xl text-foreground mb-2">{moment.title}</h3>
+                <p className="font-sans text-sm leading-relaxed text-foreground/65">{moment.text}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* STORIES - HORIZONTAL/STAGGERED SCROLL */}
       <section className="py-32 px-6 md:px-12 lg:px-24 bg-background">
         <div className="mb-20 text-center">
@@ -217,18 +286,18 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              name: "Samuel K.",
-              story: "From street life to thriving businessman, Samuel now mentors 15 youth.",
+              name: "Anonymous",
+              story: "I was healed, I got saved, and my family was restored.",
               img: "/320691.jpg"
             },
             {
-              name: "Grace M.",
-              story: "Building financial independence through our economic programs.",
+              name: "Shereen",
+              story: "I came weak and sick but was healed completely during the service.",
               img: "/320709.jpg"
             },
             {
-              name: "David O.",
-              story: "Youth leader training 20+ young people on faith and business.",
+              name: "Caleb",
+              story: "My burden for Christ was revived.",
               img: "/320695.jpg"
             }
           ].map((story, i) => (

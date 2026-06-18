@@ -28,38 +28,38 @@ export default function Programs() {
   const programs = [
     {
       id: 1,
-      title: 'Neema Festival',
+      title: 'Neema Festival & Worship Nights',
       description:
-        'An annual celebration of community, faith, and transformation bringing thousands together for spiritual renewal and social connection.',
-      impact: '500+ participants annually',
+        'Multimedia worship gatherings, Holy Spirit nights, and festival moments where communities come together for prayer, worship, salvation, and renewal.',
+      impact: 'Night worship, prayer, and public gospel gatherings',
       image: '/320686.jpg',
       color: 'from-accent/20',
     },
     {
       id: 2,
-      title: 'TOTOS Program',
+      title: 'Youth Connect & Discipleship',
       description:
-        'Comprehensive youth mentorship and skills training designed to equip young leaders with tools for economic independence and spiritual growth.',
-      impact: '200+ youth engaged yearly',
+        'Youth-centered discipleship, leadership conversations, and practical mentorship that equip young people to be witnesses and leaders in their communities.',
+      impact: 'Young people discipled for impact',
       image: '/320703.jpg',
       color: 'from-primary/10',
     },
     {
       id: 3,
-      title: 'Compassion Ministry',
+      title: 'Open-Air Campaigns & Reconciliation',
       description:
-        'Faith-centered community support addressing immediate needs while fostering long-term empowerment and dignity for vulnerable populations.',
-      impact: '1,000+ households supported',
-      image: '/320713.jpg',
+        'Crusades, missions, and reconciliation outreaches that carry the message of Christ into towns, schools, fields, and neighborhood spaces.',
+      impact: 'Salvation, healing, prayer, and restored families',
+      image: '/320710.jpg',
       color: 'from-accent/20',
     },
     {
       id: 4,
-      title: 'Women Empowerment',
+      title: 'Mission, Vision & Testimony Ministry',
       description:
-        'Economic and leadership development for women, creating pathways to financial independence, business ownership, and community leadership.',
-      impact: '300+ women transformed',
-      image: '/320698.jpg',
+        'Mission materials, testimony reports, and digital storytelling that document what God is doing and invite more people into the mission.',
+      impact: 'Campaigns, compassion, and community empowerment',
+      image: '/mission-vision.jpeg',
       color: 'from-primary/10',
     },
   ]
@@ -156,9 +156,9 @@ export default function Programs() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               { step: '01', title: 'Assess', desc: 'Understanding community needs' },
-              { step: '02', title: 'Empower', desc: 'Building skills and confidence' },
-              { step: '03', title: 'Support', desc: 'Ongoing mentorship and guidance' },
-              { step: '04', title: 'Transform', desc: 'Long-term sustainable change' },
+              { step: '02', title: 'Gather', desc: 'Creating worship, training, and outreach spaces' },
+              { step: '03', title: 'Disciple', desc: 'Ongoing mentorship and Christ-centered guidance' },
+              { step: '04', title: 'Witness', desc: 'Equipping transformed people to reach others' },
             ].map((process, idx) => (
               <motion.div
                 key={idx}
@@ -205,19 +205,19 @@ export default function Programs() {
             {[
               {
                 title: 'Dignity-First Approach',
-                description: 'We honor the inherent worth and potential of every individual and community we serve.',
+                description: 'We honor every testimony and every person as someone loved by God and worthy of care.',
               },
               {
                 title: 'Faith-Centered',
-                description: 'Christ-centered mentorship guides transformative discipleship and holistic growth.',
+                description: 'Prayer, worship, Scripture, and discipleship guide every ministry environment.',
               },
               {
                 title: 'Sustainability',
-                description: 'Programs designed for lasting impact, building capacity for long-term community independence.',
+                description: 'Events connect people to continuing mentorship, fellowship, and community support.',
               },
               {
                 title: 'Holistic Development',
-                description: 'We address spiritual, economic, social, and educational dimensions of transformation.',
+                description: 'We address spiritual renewal alongside social connection, leadership, and practical care.',
               },
             ].map((principle, idx) => (
               <motion.div

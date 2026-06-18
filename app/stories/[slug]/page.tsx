@@ -6,94 +6,64 @@ import { motion } from 'framer-motion'
 import { ArrowLeft } from 'lucide-react'
 
 const storyData: Record<string, any> = {
-  'samuel-journey': {
-    title: "Samuel's Journey: From Street Life to Purpose",
-    category: 'Youth Transformation',
+  'salvation-and-healing': {
+    title: 'Saved, Healed, and Restored',
+    category: 'Testimony',
     image: '/320691.jpg',
-    date: 'March 2024',
-    author: 'Samuel M.',
+    date: 'Mulewo 2025',
+    author: 'Anonymous',
     content: `
-      <p>Samuel was 16 when he found himself alone on the streets of Nairobi. Orphaned at a young age and raised by a struggling grandmother, he'd been passed between relatives until he ended up living in the streets. By day, he hustled for survival. By night, despair consumed him.</p>
-      
-      <p>When Transform Maisha outreach workers found him, Samuel was skeptical. He'd heard promises before. But something was different about their approach—they didn't judge him for his circumstances. Instead, they saw potential. They saw someone worth investing in.</p>
-      
-      <p>Through the TOTOS Program, Samuel received mentorship, skills training, and, most importantly, a spiritual foundation grounded in Christ. He learned that his past didn't define his future. The organization provided vocational training in technical skills while mentors walked with him through the healing of his trauma.</p>
-      
-      <p>Two years later, Samuel is apprenticing with a local technology company and mentoring other youth from similar backgrounds. He speaks about his transformation with quiet confidence: "I was told I'd end up in prison or dead. Instead, I'm building a future. Transform Maisha taught me I have value, not because of what I can do, but because I'm God's creation."</p>
-      
-      <p>Samuel's story is one of hundreds—young people discovering purpose, potential, and a pathway forward through compassionate, Christ-centered mentorship.</p>
+      <p>During the Mulewo gathering, people shared testimonies of salvation, healing, and restored homes. One testimony captured the heart of the ministry: "I was healed, I got saved, and my family was restored."</p>
+      <p>Transform Maisha Foundation exists for moments like this, where public worship and prayer become personal encounters with Christ.</p>
+      <p>Each testimony points back to the mission: compassionate, Christ-centered companionship for people and communities seeking lasting transformation.</p>
     `,
   },
-  'faith-foundation': {
-    title: "Faith's Foundation: Building an Economic Legacy",
-    category: 'Women Empowerment',
-    image: '/320703.jpg',
-    date: 'February 2024',
-    author: 'Faith K.',
+  'burden-for-christ': {
+    title: 'Burden for Christ Revived',
+    category: 'Worship Encounter',
+    image: '/320704.jpg',
+    date: 'Mulewo 2025',
+    author: 'Caleb',
     content: `
-      <p>Faith worked as a day laborer, earning barely enough to feed her three children. Her skills were limited, her options seemed non-existent, and hope felt like a luxury she couldn't afford. One income source meant one crisis away from homelessness.</p>
-      
-      <p>When she joined Transform Maisha's Women Empowerment Program, Faith received business training, microfinance support, and ongoing mentorship. But the transformation was deeper than economic—it was spiritual and psychological.</p>
-      
-      <p>For the first time, someone believed in her. Mentors invested hours helping her develop a business plan for a small catering operation. The program provided initial capital and business support as she launched.</p>
-      
-      <p>Three years later, Faith's catering business employs five other women from her community. She's not just building wealth—she's creating opportunities. Her children are in school. She's stable. And most importantly, she's mentoring other women, passing forward the belief that God has given them potential worth developing.</p>
-      
-      <p>"I'm not just feeding my family anymore—I'm building a legacy for my daughters," Faith reflects. "I want them to see that a woman can be powerful, independent, and rooted in faith."</p>
+      <p>Caleb described a renewed burden for Christ after the ministry gathering. The testimony reflects one of the deepest outcomes of worship: a heart stirred again toward prayer, service, and witness.</p>
+      <p>Through worship encounters and open-air campaigns, Transform Maisha creates spaces where people can respond to God together.</p>
+      <p>The work continues after the event through discipleship, fellowship, and community support.</p>
     `,
   },
-  'community-heals': {
-    title: 'Community Heals: Collective Transformation',
-    category: 'Community Impact',
+  'campaigns-of-hope': {
+    title: 'Campaigns of Hope',
+    category: 'Open-Air Campaign',
     image: '/320710.jpg',
-    date: 'January 2024',
-    author: 'Community Leaders',
+    date: '2025',
+    author: 'Transform Maisha Foundation',
     content: `
-      <p>Kiberera is one of Nairobi's largest informal settlements, home to over 200,000 people living in extreme poverty. When Transform Maisha began work there, they didn't arrive with grand solutions. Instead, they came to listen, to understand, and to walk alongside the community.</p>
-      
-      <p>Over five years, the Compassion Ministry and community programs have created a ripple effect of transformation. What started with supporting 50 families has grown to serve over 1,000 households.</p>
-      
-      <p>But the real transformation isn't in numbers—it's in the culture shift. Where there was despair, there's now hope. Where there was fragmentation, there's now community. Youth who were headed toward crime are now mentors. Mothers who were barely surviving are starting businesses. Churches that were disconnected are now centers of holistic transformation.</p>
-      
-      <p>The Neema Festival, an annual community celebration, now brings together 5,000+ people annually—a visible expression of collective joy and transformed lives. People who were marginalized are now leading. Potential that was hidden is now being developed.</p>
-      
-      <p>"Transformation doesn't happen in isolation," say the community leaders. "It happens when someone believes in you, when you're given tools and opportunity, and when you know you're part of something bigger than your own struggle. That's what Transform Maisha has created here."</p>
+      <p>Outdoor campaigns bring communities together around worship, prayer, and gospel proclamation. The field becomes a shared space for families, youth, leaders, and churches to gather with expectation.</p>
+      <p>These moments are not only events. They are entry points into compassion, community empowerment, and Christ-centered mentorship.</p>
+      <p>Every crowd represents people with stories, needs, gifts, and God-given potential.</p>
     `,
   },
-  'grace-story': {
-    title: 'Grace: From Poverty to Prosperity',
-    category: 'Mentorship',
-    image: '/320709.jpg',
-    date: 'December 2023',
-    author: 'Grace N.',
-    content: `
-      <p>Grace's life seemed predetermined by poverty. Born into a family struggling with food insecurity, she attended a struggling public school and saw no pathway forward. By age 18, it seemed her options were limited.</p>
-      
-      <p>A mentor from Transform Maisha met her through a youth outreach program. That mentor, Michael, invested in Grace with intentionality. He wasn't just providing guidance—he was modeling what it looks like to live a Christ-centered life with purpose and integrity.</p>
-      
-      <p>Through mentorship, Grace developed confidence and clarity about her potential. She pursued further education with Michael's support, eventually completing college. Her mentor walked with her through struggles, celebrated her victories, and most importantly, pointed her toward Jesus as the foundation of lasting transformation.</p>
-      
-      <p>Today, Grace works as a social worker in the same community where she grew up. And she's mentoring young girls, passing forward the investment that changed her life. "Michael saw something in me that I couldn't see in myself," Grace shares. "He showed me that transformation starts with believing you're valuable, that your life has purpose, and that God has a plan for you."</p>
-      
-      <p>The mentor-mentee relationship that launched Grace's transformation continues to multiply through her work with others.</p>
-    `,
-  },
-  'mentor-impact': {
-    title: 'The Mentor Effect: Multiplying Transformation',
-    category: 'Leadership',
+  'discipleship-in-action': {
+    title: 'Discipleship in Action',
+    category: 'Training',
     image: '/320716.jpg',
-    date: 'November 2023',
-    author: 'Multiple Mentors & Mentees',
+    date: '2025',
+    author: 'Transform Maisha Foundation',
     content: `
-      <p>One of Transform Maisha's most powerful discoveries is the multiplier effect of mentorship. A single person investing in another's growth doesn't just change one life—it creates a chain reaction of transformation.</p>
-      
-      <p>Consider John's story: He was mentored through the TOTOS Program five years ago. His mentor, Joseph, invested in his development with the conviction that John had potential worth cultivating. Today, John mentors 12 other young people. Each of those 12 is now mentoring others. The impact multiplies exponentially.</p>
-      
-      <p>Across all our programs, we've documented this pattern repeatedly. Mentees become mentors. Beneficiaries become leaders. Recipients become givers. This isn't accidental—it's built into our philosophy: transformation that's internalized becomes transformation we pass forward.</p>
-      
-      <p>The spiritual component is essential to this multiplication. When mentees experience Christ's transformative love and grace through mentors, they want others to experience it too. Faith becomes infectious. Hope becomes contagious. Purpose becomes something you naturally want to multiply.</p>
-      
-      <p>We're not just creating individual success stories. We're building a movement of transformation—one mentoring relationship at a time.</p>
+      <p>Transformation is strengthened through teaching, mentorship, and training spaces where people can ask questions, receive guidance, and grow in faith.</p>
+      <p>Indoor gatherings help connect public ministry moments to continuing discipleship and practical support.</p>
+      <p>The goal is a community that utilizes its God-given potential through Christ-centered mentorship and support.</p>
+    `,
+  },
+  'mission-that-guides-us': {
+    title: 'The Mission That Guides Us',
+    category: 'Mission',
+    image: '/mission-vision.jpeg',
+    date: '2025',
+    author: 'Transform Maisha Foundation',
+    content: `
+      <p>The mission is clear: to be compassionate, Christ-centered companions in community empowerment for lasting social and economic transformation.</p>
+      <p>The vision is a community that utilizes its God-given potential through Christ-centered mentorship and support.</p>
+      <p>The strategy moves through campaigns, compassion, and community empowerment, grounded in the call to make disciples of all nations.</p>
     `,
   },
 }

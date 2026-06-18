@@ -21,7 +21,7 @@ export const coreValues = [
     id: '4',
     title: 'Transformation',
     description: 'Lasting social and economic change',
-    image: '/320704.jpg',
+    image: '/mission-vision.jpeg',
   },
 ];
 
@@ -44,18 +44,18 @@ export const teamMembers = [
 
 export const testimonials = [
   {
-    quote: 'This organization changed my life through mentorship and belief in my potential.',
-    author: 'Sarah K.',
-    role: 'Youth Mentorship Program',
+    quote: 'I was healed, I got saved, and my family was restored.',
+    author: 'Anonymous',
+    role: 'Mulewo Testimony',
   },
   {
-    quote: 'The faith-centered approach gave me purpose beyond survival.',
-    author: 'John M.',
-    role: 'Economic Empowerment',
+    quote: 'I came weak and sick but was healed completely during the service.',
+    author: 'Shereen',
+    role: 'Healing Testimony',
   },
   {
-    quote: "I've seen my community transform through compassionate action.",
-    author: 'Mary N.',
-    role: 'Community Leader',
+    quote: 'My burden for Christ was revived.',
+    author: 'Caleb',
+    role: 'Worship Encounter',
   },
 ];
