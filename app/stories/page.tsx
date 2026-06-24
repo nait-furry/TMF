@@ -1,9 +1,8 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import HeroSection from '@/components/hero-section'
-import MasonryGrid from '@/components/masonry-grid'
+import Link from "next/link";
+import { motion } from "framer-motion";
+import HeroSection from "@/components/hero-section";
 
 export default function Stories() {
   const containerVariants = {
@@ -15,56 +14,56 @@ export default function Stories() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
+      transition: { duration: 0.8, ease: "easeOut" as const },
     },
-  }
+  } as const;
 
   const stories = [
     {
-      id: 'salvation-and-healing',
-      title: 'Saved and Restored',
-      subtitle: 'Healing, salvation, and family restoration',
-      image: '/320691.jpg',
-      category: 'Testimony',
+      id: "salvation-and-healing",
+      title: "Saved and Restored",
+      subtitle: "Healing, salvation, and family restoration",
+      image: "/320691.jpg",
+      category: "Testimony",
     },
     {
-      id: 'burden-for-christ',
-      title: 'Burden for Christ Revived',
-      subtitle: 'A renewed call to follow and serve',
-      image: '/320704.jpg',
-      category: 'Worship Encounter',
-      span: 'col-span-2',
+      id: "burden-for-christ",
+      title: "Burden for Christ Revived",
+      subtitle: "A renewed call to follow and serve",
+      image: "/320704.jpg",
+      category: "Worship Encounter",
+      span: "col-span-2",
     },
     {
-      id: 'campaigns-of-hope',
-      title: 'Campaigns of Hope',
-      subtitle: 'Communities gathered around the gospel',
-      image: '/320710.jpg',
-      category: 'Open-Air Campaign',
+      id: "campaigns-of-hope",
+      title: "Campaigns of Hope",
+      subtitle: "Communities gathered around the gospel",
+      image: "/320710.jpg",
+      category: "Open-Air Campaign",
     },
     {
-      id: 'discipleship-in-action',
-      title: 'Discipleship in Action',
-      subtitle: 'Teaching, mentorship, and community support',
-      image: '/320716.jpg',
-      category: 'Training',
+      id: "discipleship-in-action",
+      title: "Discipleship in Action",
+      subtitle: "Teaching, mentorship, and community support",
+      image: "/320716.jpg",
+      category: "Training",
     },
     {
-      id: 'mission-that-guides-us',
-      title: 'The Mission That Guides Us',
-      subtitle: 'Campaigns, compassion, and community empowerment',
-      image: '/mission-vision.jpeg',
-      category: 'Mission',
-      span: 'col-span-2',
+      id: "mission-that-guides-us",
+      title: "The Mission That Guides Us",
+      subtitle: "Campaigns, compassion, and community empowerment",
+      image: "/320695.jpg",
+      category: "Mission",
+      span: "col-span-2",
     },
-  ]
+  ];
 
   return (
     <main className="min-h-screen bg-background">
@@ -79,7 +78,7 @@ export default function Stories() {
         className="py-24 px-6 bg-background"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="max-w-7xl mx-auto">
@@ -88,7 +87,8 @@ export default function Stories() {
               Voices of Change
             </h2>
             <p className="text-lg text-foreground/70">
-              Explore testimonies and ministry moments from communities discovering their God-given potential.
+              Explore testimonies and ministry moments from communities
+              discovering their God-given potential.
             </p>
           </motion.div>
 
@@ -97,7 +97,7 @@ export default function Stories() {
               {stories.map((story) => (
                 <motion.div
                   key={story.id}
-                  className={`${story.span || 'col-span-1'} group cursor-pointer`}
+                  className={`${story.span || "col-span-1"} group cursor-pointer`}
                   variants={itemVariants}
                 >
                   <Link href={`/stories/${story.id}`}>
@@ -112,7 +112,9 @@ export default function Stories() {
                         <span className="text-xs uppercase tracking-wider opacity-90 mb-2">
                           {story.category}
                         </span>
-                        <h3 className="font-display text-2xl font-bold">{story.title}</h3>
+                        <h3 className="font-display text-2xl font-bold">
+                          {story.title}
+                        </h3>
                         <p className="text-sm opacity-90">{story.subtitle}</p>
                       </div>
                     </div>
@@ -129,7 +131,7 @@ export default function Stories() {
         className="py-24 px-6 bg-cream"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="max-w-4xl mx-auto text-center">
@@ -140,25 +142,20 @@ export default function Stories() {
             What People Are Saying
           </motion.h2>
 
-          <motion.div
-            className="space-y-8"
-            variants={containerVariants}
-          >
+          <motion.div className="space-y-8" variants={containerVariants}>
             {[
               {
-                quote:
-                  'I was healed, I got saved, and my family was restored.',
-                author: 'Anonymous',
+                quote: "I was healed, I got saved, and my family was restored.",
+                author: "Anonymous",
               },
               {
                 quote:
-                  'I came so weak and sick but was healed completely and instantly in the service.',
-                author: 'Shereen',
+                  "I came so weak and sick but was healed completely and instantly in the service.",
+                author: "Shereen",
               },
               {
-                quote:
-                  'My burden for Christ was revived.',
-                author: 'Caleb',
+                quote: "My burden for Christ was revived.",
+                author: "Caleb",
               },
             ].map((testimonial, idx) => (
               <motion.blockquote
@@ -181,21 +178,30 @@ export default function Stories() {
         className="relative py-32 px-6 bg-primary text-primary-foreground overflow-hidden"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full -mr-48 -mt-48 blur-3xl" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.h2 className="font-display text-display-md mb-6" variants={itemVariants}>
+          <motion.h2
+            className="font-display text-display-md mb-6"
+            variants={itemVariants}
+          >
             Be Part of These Stories
           </motion.h2>
 
-          <motion.p className="text-xl mb-8 leading-relaxed text-primary-foreground/90" variants={itemVariants}>
+          <motion.p
+            className="text-xl mb-8 leading-relaxed text-primary-foreground/90"
+            variants={itemVariants}
+          >
             Your support enables the next chapter of transformation across Kenya
           </motion.p>
 
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants}>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            variants={itemVariants}
+          >
             <Link
               href="/get-involved"
               className="px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-sm hover:opacity-90 transition-opacity"
@@ -212,5 +218,5 @@ export default function Stories() {
         </div>
       </motion.section>
     </main>
-  )
+  );
 }

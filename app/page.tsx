@@ -1,18 +1,24 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { ArrowRight, ArrowDownRight } from 'lucide-react'
-import { useRef } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight, ArrowDownRight } from "lucide-react";
+import { useRef } from "react";
 
 export default function Home() {
-  const containerRef = useRef(null)
+  const containerRef = useRef(null);
 
   return (
-    <main ref={containerRef} className="bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground">
+    <main
+      ref={containerRef}
+      className="bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground"
+    >
       {/* HERO SECTION */}
-      <section id="hero" className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-32 pb-12 px-6 md:px-12 lg:px-24 text-primary-foreground">
+      <section
+        id="hero"
+        className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-32 pb-12 px-6 md:px-12 lg:px-24 text-primary-foreground"
+      >
         <Image
           src="/320686.jpg"
           alt="Transform Maisha community gathered at an outdoor evening event"
@@ -24,43 +30,62 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-primary/20" />
 
         <div className="relative z-10 flex justify-between items-start font-sans text-xs uppercase tracking-widest text-primary-foreground/75">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-            Transform Maisha<br/>Foundation
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            Transform Maisha
+            <br />
+            Foundation
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-right">
-            Nairobi, Kenya<br/>Est. 2024
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-right"
+          >
+            Nairobi, Kenya
+            <br />
+            Est. 2024
           </motion.div>
         </div>
 
         <div className="relative z-10 mt-16 mb-12 max-w-6xl">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="font-serif text-6xl md:text-8xl lg:text-9xl leading-none uppercase"
           >
-            Every <span className="text-secondary italic pr-4">Life</span><br/>
+            Every <span className="text-secondary italic pr-4">Life</span>
+            <br />
             Counts.
           </motion.h1>
         </div>
 
         <div className="relative z-10 grid md:grid-cols-12 gap-8 items-end">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
             className="md:col-span-4"
           >
-            <ArrowDownRight className="w-12 h-12 text-secondary" strokeWidth={1} />
+            <ArrowDownRight
+              className="w-12 h-12 text-secondary"
+              strokeWidth={1}
+            />
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
             className="md:col-span-8 md:col-start-6 max-w-2xl font-sans text-lg md:text-xl leading-relaxed text-primary-foreground/90"
           >
             <p>
-              We are Christ-centered companions empowering communities across Kenya through worship gatherings, youth mentorship, compassion ministry, and lasting social and economic transformation.
+              We are Christ-centered companions empowering communities across
+              Kenya through worship gatherings, youth mentorship, compassion
+              ministry, and lasting social and economic transformation.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -82,7 +107,7 @@ export default function Home() {
 
       {/* IMAGE BREAK */}
       <section className="w-full h-[70vh] md:h-[90vh] px-6 md:px-12 lg:px-24 py-12">
-        <motion.div 
+        <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -105,14 +130,17 @@ export default function Home() {
             Our Mission
           </div>
           <div className="md:col-span-8">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight"
             >
-              To be compassionate, Christ-centered companions in community empowerment for lasting <span className="italic text-secondary">social and economic</span> transformation.
+              To be compassionate, Christ-centered companions in community
+              empowerment for lasting{" "}
+              <span className="italic text-secondary">social and economic</span>{" "}
+              transformation.
             </motion.h2>
           </div>
         </div>
@@ -121,8 +149,12 @@ export default function Home() {
       {/* PROGRAMS - ASYMMETRIC GRID */}
       <section className="py-24 bg-primary text-primary-foreground px-6 md:px-12 lg:px-24">
         <div className="flex justify-between items-end mb-20 border-b border-background/20 pb-8">
-          <h2 className="font-serif text-5xl md:text-7xl tracking-tighter">Initiatives</h2>
-          <span className="font-sans text-sm tracking-widest uppercase text-background/50 hidden md:block">04 Programs</span>
+          <h2 className="font-serif text-5xl md:text-7xl tracking-tighter">
+            Initiatives
+          </h2>
+          <span className="font-sans text-sm tracking-widest uppercase text-background/50 hidden md:block">
+            04 Programs
+          </span>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-24">
@@ -131,28 +163,28 @@ export default function Home() {
               title: "Worship & Revival",
               desc: "Holy Spirit nights, worship encounters, and gospel gatherings that call communities to Christ.",
               img: "/320713.jpg",
-              offset: "md:mt-0"
+              offset: "md:mt-0",
             },
             {
               title: "Youth Connection",
               desc: "Mentorship, discipleship, and leadership spaces where young people are empowered for impact.",
-              img: "/320703.jpg",
-              offset: "md:mt-32"
+              img: "/youth_connection.jpg",
+              offset: "md:mt-32",
             },
             {
               title: "Community Outreach",
               desc: "Open-air missions and local partnerships carrying hope, prayer, and practical care.",
               img: "/320698.jpg",
-              offset: "md:mt-0"
+              offset: "md:mt-0",
             },
             {
               title: "Media Ministry",
               desc: "Radio, testimonies, and digital stories extending the message beyond the event ground.",
               img: "/320704.jpg",
-              offset: "md:mt-32"
-            }
+              offset: "md:mt-32",
+            },
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,8 +203,12 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="font-serif text-3xl md:text-4xl mb-3 group-hover:text-secondary transition-colors text-background">{item.title}</h3>
-                    <p className="font-sans text-background/60 max-w-sm text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-serif text-3xl md:text-4xl mb-3 group-hover:text-secondary transition-colors text-background">
+                      {item.title}
+                    </h3>
+                    <p className="font-sans text-background/60 max-w-sm text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                   <ArrowRight className="w-6 h-6 transform -rotate-45 group-hover:rotate-0 transition-transform text-secondary" />
                 </div>
@@ -188,9 +224,9 @@ export default function Home() {
           {[
             { num: "2.5k", label: "Lives Transformed" },
             { num: "08", label: "Counties Active" },
-            { num: "50+", label: "Community Leaders" }
+            { num: "50+", label: "Community Leaders" },
           ].map((stat, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -201,7 +237,9 @@ export default function Home() {
               <div className="font-serif text-[12vw] md:text-[8vw] leading-none mb-4 tracking-tighter">
                 {stat.num}
               </div>
-              <div className="font-sans text-sm uppercase tracking-widest">{stat.label}</div>
+              <div className="font-sans text-sm uppercase tracking-widest">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -218,9 +256,9 @@ export default function Home() {
               Faith in motion, from worship nights to community missions.
             </h2>
             <p className="font-sans text-foreground/70 leading-relaxed">
-              The movement continues through Holy Spirit Night, Spark Conference,
-              radio ministry, Neema Festival, youth gatherings, and open-air
-              evangelism across Kenya.
+              The movement continues through Holy Spirit Night, Spark
+              Conference, radio ministry, Neema Festival, youth gatherings, and
+              open-air evangelism across Kenya.
             </p>
           </div>
 
@@ -230,26 +268,26 @@ export default function Home() {
                 title: "Mission & Vision",
                 text: "Compassionate, Christ-centered companionship through campaigns, compassion, and community empowerment.",
                 img: "/mission-vision.jpeg",
-                aspect: "aspect-[3/4]"
+                aspect: "aspect-[3/4]",
               },
               {
                 title: "Outdoor Campaigns",
                 text: "Communities gather for gospel proclamation, worship, prayer, and public testimony.",
                 img: "/320686.jpg",
-                aspect: "aspect-[4/3]"
+                aspect: "aspect-[4/3]",
               },
               {
                 title: "Worship Encounters",
                 text: "Stage ministry and worship leaders help create space for surrender and renewed faith.",
                 img: "/320703.jpg",
-                aspect: "aspect-[3/4]"
+                aspect: "aspect-[3/4]",
               },
               {
                 title: "Community Response",
                 text: "Crowds respond together as light, prayer, and worship fill the event ground.",
                 img: "/320695.jpg",
-                aspect: "aspect-[4/3]"
-              }
+                aspect: "aspect-[4/3]",
+              },
             ].map((moment) => (
               <motion.article
                 key={moment.title}
@@ -259,7 +297,9 @@ export default function Home() {
                 transition={{ duration: 0.7 }}
                 className="group"
               >
-                <div className={`relative ${moment.aspect} overflow-hidden bg-card mb-5`}>
+                <div
+                  className={`relative ${moment.aspect} overflow-hidden bg-card mb-5`}
+                >
                   <Image
                     src={moment.img}
                     alt={moment.title}
@@ -268,8 +308,12 @@ export default function Home() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="font-serif text-3xl text-foreground mb-2">{moment.title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-foreground/65">{moment.text}</p>
+                <h3 className="font-serif text-3xl text-foreground mb-2">
+                  {moment.title}
+                </h3>
+                <p className="font-sans text-sm leading-relaxed text-foreground/65">
+                  {moment.text}
+                </p>
               </motion.article>
             ))}
           </div>
@@ -279,29 +323,35 @@ export default function Home() {
       {/* STORIES - HORIZONTAL/STAGGERED SCROLL */}
       <section className="py-32 px-6 md:px-12 lg:px-24 bg-background">
         <div className="mb-20 text-center">
-          <h2 className="font-serif text-5xl md:text-7xl tracking-tighter mb-4 text-foreground">Stories of Hope</h2>
-          <p className="font-sans text-foreground/60 max-w-xl mx-auto">Real people experiencing real transformation through faith and action.</p>
+          <h2 className="font-serif text-5xl md:text-7xl tracking-tighter mb-4 text-foreground">
+            Stories of Hope
+          </h2>
+          <p className="font-sans text-foreground/60 max-w-xl mx-auto">
+            Real people experiencing real transformation through faith and
+            action.
+          </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
               name: "Anonymous",
               story: "I was healed, I got saved, and my family was restored.",
-              img: "/320691.jpg"
+              // img: "/320691.jpg",
             },
             {
               name: "Shereen",
-              story: "I came weak and sick but was healed completely during the service.",
-              img: "/320709.jpg"
+              story:
+                "I came weak and sick but was healed completely during the service.",
+              // img: "/320709.jpg",
             },
             {
               name: "Caleb",
               story: "My burden for Christ was revived.",
-              img: "/320695.jpg"
-            }
+              // img: "/320695.jpg",
+            },
           ].map((story, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -310,16 +360,20 @@ export default function Home() {
               className="group cursor-pointer"
             >
               <div className="relative aspect-[4/5] mb-6 overflow-hidden bg-card">
-                <Image
-                  src={story.img}
+                {/* <Image
+                  // src={story.img}
                   alt={story.name}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
+                /> */}
                 <div className="absolute inset-0 bg-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <h3 className="font-serif text-2xl mb-2 text-foreground">{story.name}</h3>
-              <p className="font-sans text-sm text-foreground/60 leading-relaxed">{story.story}</p>
+              <h3 className="font-serif text-2xl mb-2 text-foreground">
+                {story.name}
+              </h3>
+              <p className="font-sans text-sm text-foreground/60 leading-relaxed">
+                {story.story}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -327,25 +381,32 @@ export default function Home() {
 
       {/* FOOTER CTA */}
       <section className="py-32 px-6 md:px-12 lg:px-24 text-center border-t border-border">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
           <h2 className="font-serif text-5xl md:text-8xl leading-none mb-12 tracking-tighter text-foreground">
-            Join the <br/><span className="italic text-secondary">Movement.</span>
+            Join the <br />
+            <span className="italic text-secondary">Movement.</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/get-involved#donate" className="px-10 py-4 bg-primary text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-secondary hover:text-background transition-colors duration-300">
+            <Link
+              href="/get-involved#donate"
+              className="px-10 py-4 bg-primary text-primary-foreground font-sans uppercase tracking-widest text-xs hover:bg-secondary hover:text-background transition-colors duration-300"
+            >
               Donate Now
             </Link>
-            <Link href="/get-involved" className="px-10 py-4 border border-primary text-primary font-sans uppercase tracking-widest text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300">
+            <Link
+              href="/get-involved"
+              className="px-10 py-4 border border-primary text-primary font-sans uppercase tracking-widest text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+            >
               Get Involved
             </Link>
           </div>
         </motion.div>
       </section>
     </main>
-  )
+  );
 }

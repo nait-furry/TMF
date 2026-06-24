@@ -38,7 +38,7 @@ export const teamMembers = [
     name: 'Jennifer Mbaire Ndungu',
     role: 'Administrator, Counsellor and Director',
     bio: 'Jennifer is a trained administrator, counsellor and director with vast experience in mission work with YWAM.',
-    image: '/320716.jpg',
+    image: '/imgi_1_509175741_3158230057658667_5312661484852482542_n.jpg',
   },
 ];
 
