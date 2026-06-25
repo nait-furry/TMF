@@ -73,10 +73,10 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 py-1 ${
+                className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-left after:bg-accent after:transition-transform after:duration-300 hover:after:origin-bottom-right hover:after:scale-x-100 py-1 ${
                   isActive(item.href)
                     ? "text-accent after:scale-x-100"
-                    : "text-foreground hover:text-accent after:scale-x-0"
+                    : "text-accent after:scale-x-0 hover:text-accent"
                 }`}
               >
                 {item.label}

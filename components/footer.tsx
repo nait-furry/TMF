@@ -1,5 +1,13 @@
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
+import Link from "next/link";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -11,8 +19,12 @@ export default function Footer() {
             <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary font-display font-bold text-2xl mb-4">
               T
             </div>
-            <h3 className="font-display text-lg font-bold mb-2">Transform Maisha</h3>
-            <p className="text-sm text-primary-foreground/80">Every Life Counts</p>
+            <h3 className="font-display text-lg font-bold mb-2">
+              Transform Maisha
+            </h3>
+            <p className="text-sm text-primary-foreground/80">
+              Every Life Counts
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -20,22 +32,34 @@ export default function Footer() {
             <h4 className="font-semibold text-sm mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="hover:text-accent transition-colors">
+                <Link
+                  href="/about"
+                  className="hover:text-accent transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/programs" className="hover:text-accent transition-colors">
+                <Link
+                  href="/programs"
+                  className="hover:text-accent transition-colors"
+                >
                   Programs
                 </Link>
               </li>
               <li>
-                <Link href="/stories" className="hover:text-accent transition-colors">
+                <Link
+                  href="/stories"
+                  className="hover:text-accent transition-colors"
+                >
                   Stories
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:text-accent transition-colors">
+                <Link
+                  href="/gallery"
+                  className="hover:text-accent transition-colors"
+                >
                   Gallery
                 </Link>
               </li>
@@ -48,13 +72,19 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@transformmaisha.org" className="hover:text-accent transition-colors">
+                <a
+                  href="mailto:info@transformmaisha.org"
+                  className="hover:text-accent transition-colors"
+                >
                   info@transformmaisha.org
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="tel:+254700000000" className="hover:text-accent transition-colors">
+                <a
+                  href="tel:+254700000000"
+                  className="hover:text-accent transition-colors"
+                >
                   +254 700 000 000
                 </a>
               </li>
@@ -68,16 +98,43 @@ export default function Footer() {
           {/* Social Links */}
           <div>
             <h4 className="font-semibold text-sm mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-              <span className="p-2 bg-accent/20 rounded-sm text-primary-foreground/70">
+            <div className="flex gap-3">
+              <a
+                href="https://facebook.com/transformmaisha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-4 h-4" />
-              </span>
-              <span className="p-2 bg-accent/20 rounded-sm text-primary-foreground/70">
+              </a>
+              <a
+                href="https://twitter.com/transformmaisha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
+                aria-label="Twitter"
+              >
                 <Twitter className="w-4 h-4" />
-              </span>
-              <span className="p-2 bg-accent/20 rounded-sm text-primary-foreground/70">
+              </a>
+              <a
+                href="https://instagram.com/transformmaisha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-4 h-4" />
-              </span>
+              </a>
+              <a
+                href="https://linkedin.com/company/transformmaisha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -85,12 +142,21 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
-            <p>&copy; 2024 Transform Maisha Foundation. All rights reserved.</p>
+            <p>
+              &copy; 2024 Transform Maisha Foundation. All rights reserved. |
+              Powered by Axle Seven Labs.
+            </p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-accent transition-colors">
+              <Link
+                href="/privacy"
+                className="hover:text-accent transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-accent transition-colors">
+              <Link
+                href="/terms"
+                className="hover:text-accent transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>
@@ -98,5 +164,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

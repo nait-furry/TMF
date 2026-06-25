@@ -118,7 +118,7 @@ export default function Home() {
             src="/320710.jpg"
             alt="Large Transform Maisha outdoor gathering facing the stage"
             fill
-            className="object-cover animate-slow-pan mix-blend-multiply opacity-90 grayscale"
+            className="object-cover animate-slow-pan mix-blend-multiply"
           />
         </motion.div>
       </section>
@@ -198,7 +198,7 @@ export default function Home() {
                     src={item.img}
                     alt={item.title}
                     fill
-                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                    className="object-cover transition-all duration-700 ease-out group-hover:scale-105"
                   />
                 </div>
                 <div className="flex justify-between items-start">
@@ -305,7 +305,7 @@ export default function Home() {
                     alt={moment.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
                 <h3 className="font-serif text-3xl text-foreground mb-2">
@@ -317,65 +317,6 @@ export default function Home() {
               </motion.article>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* STORIES - HORIZONTAL/STAGGERED SCROLL */}
-      <section className="py-32 px-6 md:px-12 lg:px-24 bg-background">
-        <div className="mb-20 text-center">
-          <h2 className="font-serif text-5xl md:text-7xl tracking-tighter mb-4 text-foreground">
-            Stories of Hope
-          </h2>
-          <p className="font-sans text-foreground/60 max-w-xl mx-auto">
-            Real people experiencing real transformation through faith and
-            action.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Anonymous",
-              story: "I was healed, I got saved, and my family was restored.",
-              // img: "/320691.jpg",
-            },
-            {
-              name: "Shereen",
-              story:
-                "I came weak and sick but was healed completely during the service.",
-              // img: "/320709.jpg",
-            },
-            {
-              name: "Caleb",
-              story: "My burden for Christ was revived.",
-              // img: "/320695.jpg",
-            },
-          ].map((story, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="group cursor-pointer"
-            >
-              <div className="relative aspect-[4/5] mb-6 overflow-hidden bg-card">
-                {/* <Image
-                  // src={story.img}
-                  alt={story.name}
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                /> */}
-                <div className="absolute inset-0 bg-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <h3 className="font-serif text-2xl mb-2 text-foreground">
-                {story.name}
-              </h3>
-              <p className="font-sans text-sm text-foreground/60 leading-relaxed">
-                {story.story}
-              </p>
-            </motion.div>
-          ))}
         </div>
       </section>
 
