@@ -88,7 +88,7 @@ export default function About() {
               variants={itemVariants}
             >
               <Image
-                src="/320703.jpg"
+                src="/320703.webp"
                 alt="Transform Maisha leaders ministering from an outdoor stage"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

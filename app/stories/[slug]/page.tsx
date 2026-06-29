@@ -9,7 +9,7 @@ const storyData: Record<string, any> = {
   "salvation-and-healing": {
     title: "Saved, Healed, and Restored",
     category: "Testimony",
-    image: "/320691.jpg",
+    image: "/320691.webp",
     date: "Mulewo 2025",
     author: "Anonymous",
     content: `
@@ -21,7 +21,7 @@ const storyData: Record<string, any> = {
   "burden-for-christ": {
     title: "Burden for Christ Revived",
     category: "Worship Encounter",
-    image: "/320704.jpg",
+    image: "/320704.webp",
     date: "Mulewo 2025",
     author: "Caleb",
     content: `
@@ -33,7 +33,7 @@ const storyData: Record<string, any> = {
   "campaigns-of-hope": {
     title: "Campaigns of Hope",
     category: "Open-Air Campaign",
-    image: "/320710.jpg",
+    image: "/320710.webp",
     date: "2025",
     author: "Transform Maisha Foundation",
     content: `
@@ -45,7 +45,7 @@ const storyData: Record<string, any> = {
   "discipleship-in-action": {
     title: "Discipleship in Action",
     category: "Training",
-    image: "/320716.jpg",
+    image: "/320713.webp",
     date: "2025",
     author: "Transform Maisha Foundation",
     content: `
@@ -57,7 +57,7 @@ const storyData: Record<string, any> = {
   "mission-that-guides-us": {
     title: "The Mission That Guides Us",
     category: "Mission",
-    image: "/320695.jpg.jpeg",
+    image: "/320695.webp",
     date: "2025",
     author: "Transform Maisha Foundation",
     content: `

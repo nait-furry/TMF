@@ -1,35 +1,95 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
-import { X } from 'lucide-react'
-import HeroSection from '@/components/hero-section'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { X } from "lucide-react";
+import HeroSection from "@/components/hero-section";
 
 const galleryImages = [
-  { id: 1, src: '/320686.jpg', category: 'Campaigns', alt: 'Outdoor audience gathered in rows for an evening campaign' },
-  { id: 2, src: '/320691.jpg', category: 'Worship', alt: 'Minister leading worship and prayer from the stage' },
-  { id: 3, src: '/320695.jpg', category: 'Campaigns', alt: 'Large outdoor audience facing the illuminated stage' },
-  { id: 4, src: '/320698.jpg', category: 'Training', alt: 'Indoor teaching session with a gathered community' },
-  { id: 5, src: '/320703.jpg', category: 'Worship', alt: 'Worship leaders ministering from an outdoor stage' },
-  { id: 6, src: '/320704.jpg', category: 'Campaigns', alt: 'Crowd gathered near the stage during a night campaign' },
-  { id: 7, src: '/320709.jpg', category: 'Worship', alt: 'Minister speaking during a stage session' },
-  { id: 8, src: '/320710.jpg', category: 'Campaigns', alt: 'Community gathered around a brightly lit outdoor stage' },
-  { id: 9, src: '/320713.jpg', category: 'Campaigns', alt: 'Night crowd responding during open-air ministry' },
-  { id: 10, src: '/320716.jpg', category: 'Training', alt: 'Facilitator addressing an indoor audience' },
-  { id: 11, src: '/mission-vision.jpeg', category: 'Mission', alt: 'Transform Maisha Foundation mission, vision, and strategy artwork' },
-]
+  {
+    id: 1,
+    src: "/320686.webp",
+    category: "Campaigns",
+    alt: "Outdoor audience gathered in rows for an evening campaign",
+  },
+  {
+    id: 2,
+    src: "/320691.webp",
+    category: "Worship",
+    alt: "Minister leading worship and prayer from the stage",
+  },
+  {
+    id: 3,
+    src: "/320695.webp",
+    category: "Campaigns",
+    alt: "Large outdoor audience facing the illuminated stage",
+  },
+  {
+    id: 4,
+    src: "/320698.webp",
+    category: "Training",
+    alt: "Indoor teaching session with a gathered community",
+  },
+  {
+    id: 5,
+    src: "/320703.webp",
+    category: "Worship",
+    alt: "Worship leaders ministering from an outdoor stage",
+  },
+  {
+    id: 6,
+    src: "/320704.webp",
+    category: "Campaigns",
+    alt: "Crowd gathered near the stage during a night campaign",
+  },
+  {
+    id: 7,
+    src: "/320709.webp",
+    category: "Worship",
+    alt: "Minister speaking during a stage session",
+  },
+  {
+    id: 8,
+    src: "/320710.webp",
+    category: "Campaigns",
+    alt: "Community gathered around a brightly lit outdoor stage",
+  },
+  {
+    id: 9,
+    src: "/320713.webp",
+    category: "Campaigns",
+    alt: "Night crowd responding during open-air ministry",
+  },
+  {
+    id: 10,
+    src: "/320716.webp",
+    category: "Training",
+    alt: "Facilitator addressing an indoor audience",
+  },
+  {
+    id: 11,
+    src: "/mission-vision.webp",
+    category: "Mission",
+    alt: "Transform Maisha Foundation mission, vision, and strategy artwork",
+  },
+];
 
-const categories = ['All', ...Array.from(new Set(galleryImages.map((img) => img.category)))]
+const categories = [
+  "All",
+  ...Array.from(new Set(galleryImages.map((img) => img.category))),
+];
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<(typeof galleryImages)[0] | null>(null)
-  const [activeCategory, setActiveCategory] = useState('All')
+  const [selectedImage, setSelectedImage] = useState<
+    (typeof galleryImages)[0] | null
+  >(null);
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredImages =
-    activeCategory === 'All'
+    activeCategory === "All"
       ? galleryImages
-      : galleryImages.filter((img) => img.category === activeCategory)
+      : galleryImages.filter((img) => img.category === activeCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,16 +100,16 @@ export default function Gallery() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: "easeOut" as const },
     },
-  }
+  } as const;
 
   return (
     <main className="min-h-screen bg-background">
@@ -74,8 +134,8 @@ export default function Gallery() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2 rounded-sm font-medium text-sm transition-all ${
                   activeCategory === category
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-background text-foreground border border-border hover:border-primary'
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-background text-foreground border border-border hover:border-primary"
                 }`}
               >
                 {category}
@@ -188,15 +248,30 @@ export default function Gallery() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full -mr-48 -mt-48 blur-3xl" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.h2 className="font-display text-display-md mb-6" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <motion.h2
+            className="font-display text-display-md mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
             See the Transformation
           </motion.h2>
 
-          <motion.p className="text-xl mb-8 leading-relaxed text-primary-foreground/90" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-            Follow the journey from the event ground to the testimony report as lives are reached across Kenya.
+          <motion.p
+            className="text-xl mb-8 leading-relaxed text-primary-foreground/90"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            Follow the journey from the event ground to the testimony report as
+            lives are reached across Kenya.
           </motion.p>
 
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             <Link
               href="/get-involved"
               className="px-8 py-3 bg-accent text-accent-foreground font-semibold rounded-sm hover:opacity-90 transition-opacity"
@@ -213,5 +288,5 @@ export default function Gallery() {
         </div>
       </motion.section>
     </main>
-  )
+  );
 }

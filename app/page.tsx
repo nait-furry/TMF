@@ -20,7 +20,7 @@ export default function Home() {
         className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-32 pb-12 px-6 md:px-12 lg:px-24 text-primary-foreground"
       >
         <Image
-          src="/320686.jpg"
+          src="/320686.webp"
           alt="Transform Maisha community gathered at an outdoor evening event"
           fill
           className="object-cover"
@@ -115,7 +115,7 @@ export default function Home() {
           className="w-full h-full relative overflow-hidden bg-card"
         >
           <Image
-            src="/320710.jpg"
+            src="/320710.webp"
             alt="Large Transform Maisha outdoor gathering facing the stage"
             fill
             className="object-cover animate-slow-pan mix-blend-multiply"
@@ -162,25 +162,25 @@ export default function Home() {
             {
               title: "Worship & Revival",
               desc: "Holy Spirit nights, worship encounters, and gospel gatherings that call communities to Christ.",
-              img: "/320713.jpg",
+              img: "/320713.webp",
               offset: "md:mt-0",
             },
             {
               title: "Youth Connection",
               desc: "Mentorship, discipleship, and leadership spaces where young people are empowered for impact.",
-              img: "/youth_connection.jpg",
+              img: "/youth_connection.webp",
               offset: "md:mt-32",
             },
             {
               title: "Community Outreach",
               desc: "Open-air missions and local partnerships carrying hope, prayer, and practical care.",
-              img: "/320698.jpg",
+              img: "/comnunity_outreach.webp",
               offset: "md:mt-0",
             },
             {
               title: "Media Ministry",
               desc: "Radio, testimonies, and digital stories extending the message beyond the event ground.",
-              img: "/320704.jpg",
+              img: "/320704.webp",
               offset: "md:mt-32",
             },
           ].map((item, i) => (
@@ -267,25 +267,25 @@ export default function Home() {
               {
                 title: "Mission & Vision",
                 text: "Compassionate, Christ-centered companionship through campaigns, compassion, and community empowerment.",
-                img: "/mission-vision.jpeg",
+                img: "/mission-vision.webp",
                 aspect: "aspect-[3/4]",
               },
               {
                 title: "Outdoor Campaigns",
                 text: "Communities gather for gospel proclamation, worship, prayer, and public testimony.",
-                img: "/320686.jpg",
+                img: "/320686.webp",
                 aspect: "aspect-[4/3]",
               },
               {
                 title: "Worship Encounters",
                 text: "Stage ministry and worship leaders help create space for surrender and renewed faith.",
-                img: "/320703.jpg",
+                img: "/320703.webp",
                 aspect: "aspect-[3/4]",
               },
               {
                 title: "Community Response",
                 text: "Crowds respond together as light, prayer, and worship fill the event ground.",
-                img: "/320695.jpg",
+                img: "/320695.webp",
                 aspect: "aspect-[4/3]",
               },
             ].map((moment) => (

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       "Join a movement of compassionate transformation across Kenya.",
     type: "website",
-    images: ["/320686.jpg"],
+    images: ["/320686.webp"],
   },
 };
 

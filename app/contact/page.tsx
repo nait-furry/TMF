@@ -30,26 +30,26 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "info@transformmaisha.org",
-      href: "mailto:info@transformmaisha.org",
+      value: "sethestar@gmail.com",
+      href: "mailto:sethestar@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+254 700 000 000",
-      href: "tel:+254700000000",
+      value: "0726 997535",
+      href: "tel:+254726997535",
+    },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      value: "0726 997535",
+      href: "https://wa.me/254726997535",
     },
     {
       icon: MapPin,
       label: "Office",
       value: "Nairobi, Kenya",
       href: "#map",
-    },
-    {
-      icon: Clock,
-      label: "Office Hours",
-      value: "Mon - Fri, 9AM - 5PM EAT",
-      href: "mailto:info@transformmaisha.org",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function Contact() {
 
               <motion.div variants={itemVariants}>
                 <Link
-                  href="https://wa.me/254700000000"
+                  href="https://wa.me/254726997535"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-semibold rounded-full hover:bg-[#20bd5a] transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -156,16 +156,14 @@ export default function Contact() {
               <motion.div className="mt-12" variants={itemVariants}>
                 <h3 className="font-semibold text-primary mb-4">Follow Us</h3>
                 <div className="flex gap-4">
-                  {["Facebook", "Twitter", "Instagram", "LinkedIn"].map(
-                    (social) => (
-                      <span
-                        key={social}
-                        className="px-4 py-2 bg-background border border-border rounded-sm text-sm font-medium text-foreground/60"
-                      >
-                        {social}
-                      </span>
-                    ),
-                  )}
+                  <a
+                    href="https://web.facebook.com/people/Transform-Maisha-Foundation/61582454932459/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-background border border-border rounded-sm text-sm font-medium text-foreground/60 hover:border-primary hover:text-primary transition-colors"
+                  >
+                    Facebook
+                  </a>
                 </div>
               </motion.div>
             </motion.div>
@@ -275,7 +273,7 @@ export default function Contact() {
               Support Us Today
             </Link>
             <Link
-              href="https://wa.me/254700000000"
+              href="https://wa.me/254726997535"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border-2 border-primary-foreground text-primary-foreground font-semibold rounded-sm hover:bg-primary-foreground/10 transition-colors inline-flex items-center justify-center gap-2"

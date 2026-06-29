@@ -1,13 +1,5 @@
 import Link from "next/link";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -73,19 +65,30 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:info@transformmaisha.org"
+                  href="mailto:sethestar@gmail.com"
                   className="hover:text-accent transition-colors"
                 >
-                  info@transformmaisha.org
+                  sethestar@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a
-                  href="tel:+254700000000"
+                  href="tel:+254726997535"
                   className="hover:text-accent transition-colors"
                 >
-                  +254 700 000 000
+                  0726 997535
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MessageCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <a
+                  href="https://wa.me/254726997535"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  WhatsApp: 0726 997535
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -100,40 +103,13 @@ export default function Footer() {
             <h4 className="font-semibold text-sm mb-4">Follow Us</h4>
             <div className="flex gap-3">
               <a
-                href="https://facebook.com/transformmaisha"
+                href="https://web.facebook.com/people/Transform-Maisha-Foundation/61582454932459/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com/transformmaisha"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a
-                href="https://instagram.com/transformmaisha"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://linkedin.com/company/transformmaisha"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-accent/20 rounded-sm text-primary-foreground/70"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>

@@ -30,14 +30,14 @@ export default function Stories() {
       id: "salvation-and-healing",
       title: "Saved and Restored",
       subtitle: "Healing, salvation, and family restoration",
-      image: "/320691.jpg",
+      image: "/320691.webp",
       category: "Testimony",
     },
     {
       id: "burden-for-christ",
       title: "Burden for Christ Revived",
       subtitle: "A renewed call to follow and serve",
-      image: "/320704.jpg",
+      image: "/320704.webp",
       category: "Worship Encounter",
       span: "col-span-2",
     },
@@ -45,21 +45,21 @@ export default function Stories() {
       id: "campaigns-of-hope",
       title: "Campaigns of Hope",
       subtitle: "Communities gathered around the gospel",
-      image: "/320710.jpg",
+      image: "/320710.webp",
       category: "Open-Air Campaign",
     },
     {
       id: "discipleship-in-action",
       title: "Discipleship in Action",
       subtitle: "Teaching, mentorship, and community support",
-      image: "/320716.jpg",
+      image: "/320713.webp",
       category: "Training",
     },
     {
       id: "mission-that-guides-us",
       title: "The Mission That Guides Us",
       subtitle: "Campaigns, compassion, and community empowerment",
-      image: "/320695.jpg",
+      image: "/320695.webp",
       category: "Mission",
       span: "col-span-2",
     },
@@ -122,53 +122,6 @@ export default function Stories() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Testimonials Section */}
-      <motion.section
-        className="py-24 px-6 bg-cream"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            className="font-display text-display-md text-primary mb-12"
-            variants={itemVariants}
-          >
-            What People Are Saying
-          </motion.h2>
-
-          <motion.div className="space-y-8" variants={containerVariants}>
-            {[
-              {
-                quote: "I was healed, I got saved, and my family was restored.",
-                author: "Anonymous",
-              },
-              {
-                quote:
-                  "I came so weak and sick but was healed completely and instantly in the service.",
-                author: "Shereen",
-              },
-              {
-                quote: "My burden for Christ was revived.",
-                author: "Caleb",
-              },
-            ].map((testimonial, idx) => (
-              <motion.blockquote
-                key={idx}
-                className="text-xl italic text-foreground/80 border-l-4 border-accent pl-6 py-4"
-                variants={itemVariants}
-              >
-                "{testimonial.quote}"
-                <footer className="text-sm font-semibold text-primary mt-2 not-italic">
-                  — {testimonial.author}
-                </footer>
-              </motion.blockquote>
-            ))}
           </motion.div>
         </div>
       </motion.section>
