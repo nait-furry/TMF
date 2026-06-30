@@ -268,6 +268,7 @@ export default function About() {
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"
+                    style={{ objectPosition: member.imagePosition || "center" }}
                   />
                 </div>
                 <h3 className="font-display text-xl text-primary mb-1">

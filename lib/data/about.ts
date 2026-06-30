@@ -32,6 +32,7 @@ export const teamMembers = [
     role: 'Bishop, Theologian and Pastoral Psychologist',
     bio: 'Popularly known as Pastor Rhymes, Allan is a bishop and theologian with a doctorate in pastoral psychology.',
     image: '/pastorT.webp',
+    imagePosition: '50% 16%',
   },
   {
     id: '2',
@@ -39,6 +40,7 @@ export const teamMembers = [
     role: 'Administrator, Counsellor and Director',
     bio: 'Jennifer is a trained administrator, counsellor and director with vast experience in mission work with YWAM.',
     image: '/imgi_1_509175741_3158230057658667_5312661484852482542_n.webp',
+    imagePosition: '50% 33%',
   },
 ];
 
